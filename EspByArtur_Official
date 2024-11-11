@@ -1,0 +1,12 @@
+local highlightColor = Color3.fromRGB(19, 235, 255)
+
+local function highlightPlayer(player)
+    local highlight = Instance.new("Highlight")
+    highlight.Parent = player.Character
+    highlight.FillColor = highlightColor
+    highlight.OutlineColor = highlightColor
+end
+
+for _, player in pairs(game.Players:GetPlayers()) do
+    highlightPlayer(player)
+end
