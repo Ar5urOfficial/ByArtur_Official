@@ -1,0 +1,193 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local LightX = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Name = Instance.new("TextLabel")
+local Label = Instance.new("TextLabel")
+local InfniteYield = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local SeekPlush = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local SeekGun = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local RocketLauncher = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local A1000Tablet = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+
+--Properties:
+
+LightX.Name = "LightX"
+LightX.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+LightX.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+LightX.ResetOnSpawn = false
+
+Main.Name = "Main"
+Main.Parent = LightX
+Main.AnchorPoint = Vector2.new(0.5, 0.5)
+Main.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.34538275, 0, 0.670924604, 0)
+Main.Size = UDim2.new(0, 421, 0, 378)
+Main.Active = true
+Main.Draggable = true
+
+UICorner.CornerRadius = UDim.new(0, 9)
+UICorner.Parent = Main
+
+Name.Name = "Name"
+Name.Parent = Main
+Name.AnchorPoint = Vector2.new(0.5, 0.5)
+Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name.BackgroundTransparency = 1.000
+Name.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name.BorderSizePixel = 0
+Name.Position = UDim2.new(0.498812348, 0, 0.0319131501, 0)
+Name.Size = UDim2.new(0, 260, 0, 32)
+Name.Font = Enum.Font.RobotoMono
+Name.Text = "LightX Items"
+Name.TextColor3 = Color3.fromRGB(255, 255, 255)
+Name.TextScaled = true
+Name.TextSize = 14.000
+Name.TextWrapped = true
+
+Label.Name = "Label"
+Label.Parent = Main
+Label.AnchorPoint = Vector2.new(0.5, 0.5)
+Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Label.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Label.BorderSizePixel = 0
+Label.Position = UDim2.new(0.499851584, 0, 0.0803083777, 0)
+Label.Size = UDim2.new(0, 421, 0, 3)
+Label.Font = Enum.Font.SourceSans
+Label.Text = ""
+Label.TextColor3 = Color3.fromRGB(0, 0, 0)
+Label.TextSize = 14.000
+
+InfniteYield.Name = "InfniteYield"
+InfniteYield.Parent = Main
+InfniteYield.AnchorPoint = Vector2.new(0.5, 0.5)
+InfniteYield.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+InfniteYield.BorderColor3 = Color3.fromRGB(0, 0, 0)
+InfniteYield.BorderSizePixel = 0
+InfniteYield.Position = UDim2.new(0.244016603, 0, 0.176914513, 0)
+InfniteYield.Size = UDim2.new(0, 192, 0, 50)
+InfniteYield.Font = Enum.Font.RobotoMono
+InfniteYield.Text = "Infinite Yield"
+InfniteYield.TextColor3 = Color3.fromRGB(255, 255, 255)
+InfniteYield.TextScaled = true
+InfniteYield.TextSize = 14.000
+InfniteYield.TextWrapped = true
+
+UICorner_2.CornerRadius = UDim.new(0, 9)
+UICorner_2.Parent = InfniteYield
+InfniteYield.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end)
+
+SeekPlush.Name = "SeekPlush"
+SeekPlush.Parent = Main
+SeekPlush.AnchorPoint = Vector2.new(0.5, 0.5)
+SeekPlush.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+SeekPlush.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SeekPlush.BorderSizePixel = 0
+SeekPlush.Position = UDim2.new(0.754705369, 0, 0.176914513, 0)
+SeekPlush.Size = UDim2.new(0, 192, 0, 50)
+SeekPlush.Font = Enum.Font.RobotoMono
+SeekPlush.Text = "Seek Plush"
+SeekPlush.TextColor3 = Color3.fromRGB(255, 255, 255)
+SeekPlush.TextScaled = true
+SeekPlush.TextSize = 14.000
+SeekPlush.TextWrapped = true
+
+UICorner_3.CornerRadius = UDim.new(0, 9)
+UICorner_3.Parent = SeekPlush
+SeekGun.MouseButton1Down:Connect(function()
+	local plr = game.Players.LocalPlayer
+	local hum = plr.Character:WaitForChild("Humanoid")
+
+	local plush = game:GetObjects("rbxassetid://13613269677")[1]
+	plush.Parent = plr.Backpack
+	local anim = hum:LoadAnimation(plush.A.Hold)
+
+	plush.Equipped:Connect(function()
+		anim:Play()
+	end)
+	plush.Unequipped:Connect(function()
+		anim:Stop()
+	end)
+
+	plush.Activated:Connect(function()
+		plush.Toy:Play()
+	end)
+end)
+
+SeekGun.Name = "SeekGun"
+SeekGun.Parent = Main
+SeekGun.AnchorPoint = Vector2.new(0.5, 0.5)
+SeekGun.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+SeekGun.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SeekGun.BorderSizePixel = 0
+SeekGun.Position = UDim2.new(0.244016603, 0, 0.33299917, 0)
+SeekGun.Size = UDim2.new(0, 192, 0, 50)
+SeekGun.Font = Enum.Font.RobotoMono
+SeekGun.Text = "Seek Gun"
+SeekGun.TextColor3 = Color3.fromRGB(255, 255, 255)
+SeekGun.TextScaled = true
+SeekGun.TextSize = 14.000
+SeekGun.TextWrapped = true
+
+UICorner_4.CornerRadius = UDim.new(0, 9)
+UICorner_4.Parent = SeekGun
+SeekGun.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/Scripts/main/seekgun.lua"))()
+end)
+
+RocketLauncher.Name = "RocketLauncher"
+RocketLauncher.Parent = Main
+RocketLauncher.AnchorPoint = Vector2.new(0.5, 0.5)
+RocketLauncher.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+RocketLauncher.BorderColor3 = Color3.fromRGB(0, 0, 0)
+RocketLauncher.BorderSizePixel = 0
+RocketLauncher.Position = UDim2.new(0.752330065, 0, 0.33299917, 0)
+RocketLauncher.Size = UDim2.new(0, 192, 0, 50)
+RocketLauncher.Font = Enum.Font.RobotoMono
+RocketLauncher.Text = "Rocket Launcher"
+RocketLauncher.TextColor3 = Color3.fromRGB(255, 255, 255)
+RocketLauncher.TextScaled = true
+RocketLauncher.TextSize = 14.000
+RocketLauncher.TextWrapped = true
+
+UICorner_5.CornerRadius = UDim.new(0, 9)
+UICorner_5.Parent = RocketLauncher
+RocketLauncher.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/Scripts/main/rocketLauncher.lua"))()
+end)
+
+A1000Tablet.Name = "A-1000Tablet"
+A1000Tablet.Parent = Main
+A1000Tablet.AnchorPoint = Vector2.new(0.5, 0.5)
+A1000Tablet.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+A1000Tablet.BorderColor3 = Color3.fromRGB(0, 0, 0)
+A1000Tablet.BorderSizePixel = 0
+A1000Tablet.Position = UDim2.new(0.244016528, 0, 0.499665767, 0)
+A1000Tablet.Size = UDim2.new(0, 192, 0, 50)
+A1000Tablet.Font = Enum.Font.RobotoMono
+A1000Tablet.Text = "A-1000 Tablet"
+A1000Tablet.TextColor3 = Color3.fromRGB(255, 255, 255)
+A1000Tablet.TextScaled = true
+A1000Tablet.TextSize = 14.000
+A1000Tablet.TextWrapped = true
+
+UICorner_6.CornerRadius = UDim.new(0, 9)
+UICorner_6.Parent = A1000Tablet
+A1000Tablet.MouseButton1Down:Connect(function()
+	_G.scanner_fps = 30
+	_G.disable_static = false
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/Scripts/main/Scanner.lua"))()
+end)
