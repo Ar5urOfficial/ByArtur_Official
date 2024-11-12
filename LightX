@@ -4,20 +4,26 @@
 -- Instances:
 
 local LightX = Instance.new("ScreenGui")
+local All = Instance.new("Frame")
 local Main = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
+local SpeedChanger = Instance.new("Frame")
+local SpeedChangerName = Instance.new("TextLabel")
+local EnterNumbers = Instance.new("TextBox")
+local FovChanger = Instance.new("Frame")
+local FovChangerName = Instance.new("TextLabel")
+local EnterNumbers_2 = Instance.new("TextBox")
+local SaveSettings = Instance.new("TextButton")
+local Esp = Instance.new("Frame")
+local FovChangerName_2 = Instance.new("TextLabel")
+local PlayerEsp = Instance.new("TextButton")
+local Addons = Instance.new("Frame")
 local Name = Instance.new("TextLabel")
-local Label = Instance.new("TextLabel")
-local InfniteYield = Instance.new("TextButton")
-local UICorner_2 = Instance.new("UICorner")
+local InfiniteYield = Instance.new("TextButton")
 local SeekPlush = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local SeekGun = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
-local RocketLauncher = Instance.new("TextButton")
-local UICorner_5 = Instance.new("UICorner")
-local A1000Tablet = Instance.new("TextButton")
-local UICorner_6 = Instance.new("UICorner")
+local PrisonLifeScript = Instance.new("TextButton")
+local Name_2 = Instance.new("TextLabel")
+local Minimize = Instance.new("TextButton")
+local Open = Instance.new("TextButton")
 
 --Properties:
 
@@ -26,88 +32,239 @@ LightX.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 LightX.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 LightX.ResetOnSpawn = false
 
+All.Name = "All"
+All.Parent = LightX
+All.AnchorPoint = Vector2.new(0.5, 0.5)
+All.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+All.BorderColor3 = Color3.fromRGB(255, 255, 255)
+All.Position = UDim2.new(0.5, 0, 0.5, 0)
+All.Size = UDim2.new(0, 587, 0, 620)
+All.Active = true
+All.Draggable = true
+
 Main.Name = "Main"
-Main.Parent = LightX
+Main.Parent = All
 Main.AnchorPoint = Vector2.new(0.5, 0.5)
 Main.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Main.BorderSizePixel = 0
-Main.Position = UDim2.new(0.34538275, 0, 0.670924604, 0)
-Main.Size = UDim2.new(0, 421, 0, 378)
-Main.Active = true
-Main.Draggable = true
+Main.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Main.Position = UDim2.new(0.5, 0, 0.52822578, 0)
+Main.Size = UDim2.new(0, 587, 0, 585)
 
-UICorner.CornerRadius = UDim.new(0, 9)
-UICorner.Parent = Main
+SpeedChanger.Name = "SpeedChanger"
+SpeedChanger.Parent = Main
+SpeedChanger.AnchorPoint = Vector2.new(0.5, 0.5)
+SpeedChanger.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+SpeedChanger.BorderColor3 = Color3.fromRGB(255, 255, 255)
+SpeedChanger.Position = UDim2.new(0.183134586, 0, 0.0770547912, 0)
+SpeedChanger.Size = UDim2.new(0, 201, 0, 78)
+
+SpeedChangerName.Name = "SpeedChangerName"
+SpeedChangerName.Parent = SpeedChanger
+SpeedChangerName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SpeedChangerName.BackgroundTransparency = 1.000
+SpeedChangerName.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SpeedChangerName.BorderSizePixel = 0
+SpeedChangerName.Size = UDim2.new(0, 64, 0, 22)
+SpeedChangerName.Font = Enum.Font.RobotoMono
+SpeedChangerName.Text = "Speed"
+SpeedChangerName.TextColor3 = Color3.fromRGB(255, 255, 255)
+SpeedChangerName.TextScaled = true
+SpeedChangerName.TextSize = 14.000
+SpeedChangerName.TextWrapped = true
+
+EnterNumbers.Name = "EnterNumbers"
+EnterNumbers.Parent = SpeedChanger
+EnterNumbers.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+EnterNumbers.BorderColor3 = Color3.fromRGB(255, 255, 255)
+EnterNumbers.Position = UDim2.new(0.0547263697, 0, 0.358974367, 0)
+EnterNumbers.Size = UDim2.new(0, 179, 0, 41)
+EnterNumbers.Font = Enum.Font.RobotoMono
+EnterNumbers.PlaceholderText = "0-75"
+EnterNumbers.Text = ""
+EnterNumbers.TextColor3 = Color3.fromRGB(255, 255, 255)
+EnterNumbers.TextScaled = true
+EnterNumbers.TextSize = 46.000
+EnterNumbers.TextWrapped = true
+
+FovChanger.Name = "FovChanger"
+FovChanger.Parent = Main
+FovChanger.AnchorPoint = Vector2.new(0.5, 0.5)
+FovChanger.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+FovChanger.BorderColor3 = Color3.fromRGB(255, 255, 255)
+FovChanger.Position = UDim2.new(0.537478685, 0, 0.0770547912, 0)
+FovChanger.Size = UDim2.new(0, 201, 0, 78)
+
+FovChangerName.Name = "FovChangerName"
+FovChangerName.Parent = FovChanger
+FovChangerName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FovChangerName.BackgroundTransparency = 1.000
+FovChangerName.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FovChangerName.BorderSizePixel = 0
+FovChangerName.Size = UDim2.new(0, 64, 0, 22)
+FovChangerName.Font = Enum.Font.RobotoMono
+FovChangerName.Text = "Fov"
+FovChangerName.TextColor3 = Color3.fromRGB(255, 255, 255)
+FovChangerName.TextScaled = true
+FovChangerName.TextSize = 14.000
+FovChangerName.TextWrapped = true
+
+EnterNumbers_2.Name = "EnterNumbers"
+EnterNumbers_2.Parent = FovChanger
+EnterNumbers_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+EnterNumbers_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+EnterNumbers_2.Position = UDim2.new(0.318407953, 0, 0.358974367, 0)
+EnterNumbers_2.Size = UDim2.new(0, 126, 0, 41)
+EnterNumbers_2.Font = Enum.Font.RobotoMono
+EnterNumbers_2.PlaceholderText = "0-120"
+EnterNumbers_2.Text = ""
+EnterNumbers_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+EnterNumbers_2.TextScaled = true
+EnterNumbers_2.TextSize = 46.000
+EnterNumbers_2.TextWrapped = true
+
+SaveSettings.Name = "SaveSettings"
+SaveSettings.Parent = FovChanger
+SaveSettings.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+SaveSettings.BorderColor3 = Color3.fromRGB(255, 255, 255)
+SaveSettings.Position = UDim2.new(0.0597014911, 0, 0.371794879, 0)
+SaveSettings.Size = UDim2.new(0, 40, 0, 40)
+SaveSettings.Font = Enum.Font.RobotoMono
+SaveSettings.Text = "Save"
+SaveSettings.TextColor3 = Color3.fromRGB(255, 255, 255)
+SaveSettings.TextScaled = true
+SaveSettings.TextSize = 14.000
+SaveSettings.TextWrapped = true
+
+Esp.Name = "Esp"
+Esp.Parent = Main
+Esp.AnchorPoint = Vector2.new(0.5, 0.5)
+Esp.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Esp.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Esp.Position = UDim2.new(0.183134586, 0, 0.226027399, 0)
+Esp.Size = UDim2.new(0, 201, 0, 78)
+
+FovChangerName_2.Name = "FovChangerName"
+FovChangerName_2.Parent = Esp
+FovChangerName_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FovChangerName_2.BackgroundTransparency = 1.000
+FovChangerName_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FovChangerName_2.BorderSizePixel = 0
+FovChangerName_2.Size = UDim2.new(0, 64, 0, 22)
+FovChangerName_2.Font = Enum.Font.RobotoMono
+FovChangerName_2.Text = "Esp"
+FovChangerName_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+FovChangerName_2.TextScaled = true
+FovChangerName_2.TextSize = 14.000
+FovChangerName_2.TextWrapped = true
+
+PlayerEsp.Name = "PlayerEsp"
+PlayerEsp.Parent = Esp
+PlayerEsp.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+PlayerEsp.BorderColor3 = Color3.fromRGB(255, 255, 255)
+PlayerEsp.Position = UDim2.new(0.0497512445, 0, 0.358974367, 0)
+PlayerEsp.Size = UDim2.new(0, 69, 0, 22)
+PlayerEsp.Font = Enum.Font.RobotoMono
+PlayerEsp.Text = "PlayerEsp"
+PlayerEsp.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayerEsp.TextScaled = true
+PlayerEsp.TextSize = 14.000
+PlayerEsp.TextWrapped = true
+PlayerEsp.MouseButton1Down:Connect(function()
+	local Players = game:GetService("Players"):GetChildren()
+	local RunService = game:GetService("RunService")
+	local highlight = Instance.new("Highlight")
+	highlight.Name = "Highlight"
+
+	for i, v in pairs(Players) do
+		repeat wait() until v.Character
+		if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+			local highlightClone = highlight:Clone()
+			highlightClone.Adornee = v.Character
+			highlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
+			highlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+			highlightClone.Name = "Highlight"
+		end
+	end
+
+	game.Players.PlayerAdded:Connect(function(player)
+		repeat wait() until player.Character
+		if not player.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+			local highlightClone = highlight:Clone()
+			highlightClone.Adornee = player.Character
+			highlightClone.Parent = player.Character:FindFirstChild("HumanoidRootPart")
+			highlightClone.Name = "Highlight"
+		end
+	end)
+
+	game.Players.PlayerRemoving:Connect(function(playerRemoved)
+		playerRemoved.Character:FindFirstChild("HumanoidRootPart").Highlight:Destroy()
+	end)
+
+	RunService.Heartbeat:Connect(function()
+		for i, v in pairs(Players) do
+			repeat wait() until v.Character
+			if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+				local highlightClone = highlight:Clone()
+				highlightClone.Adornee = v.Character
+				highlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
+				highlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+				highlightClone.Name = "Highlight"
+				task.wait()
+			end
+		end
+	end)
+end)
+
+Addons.Name = "Addons"
+Addons.Parent = Main
+Addons.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Addons.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Addons.Position = UDim2.new(0.722316861, 0, 0.0102739725, 0)
+Addons.Size = UDim2.new(0, 157, 0, 571)
 
 Name.Name = "Name"
-Name.Parent = Main
-Name.AnchorPoint = Vector2.new(0.5, 0.5)
+Name.Parent = Addons
 Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Name.BackgroundTransparency = 1.000
 Name.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Name.BorderSizePixel = 0
-Name.Position = UDim2.new(0.498812348, 0, 0.0319131501, 0)
-Name.Size = UDim2.new(0, 260, 0, 32)
+Name.Size = UDim2.new(0, 67, 0, 22)
 Name.Font = Enum.Font.RobotoMono
-Name.Text = "LightX Items"
+Name.Text = "Addons"
 Name.TextColor3 = Color3.fromRGB(255, 255, 255)
 Name.TextScaled = true
 Name.TextSize = 14.000
 Name.TextWrapped = true
 
-Label.Name = "Label"
-Label.Parent = Main
-Label.AnchorPoint = Vector2.new(0.5, 0.5)
-Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Label.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Label.BorderSizePixel = 0
-Label.Position = UDim2.new(0.499851584, 0, 0.0803083777, 0)
-Label.Size = UDim2.new(0, 421, 0, 3)
-Label.Font = Enum.Font.SourceSans
-Label.Text = ""
-Label.TextColor3 = Color3.fromRGB(0, 0, 0)
-Label.TextSize = 14.000
-
-InfniteYield.Name = "InfniteYield"
-InfniteYield.Parent = Main
-InfniteYield.AnchorPoint = Vector2.new(0.5, 0.5)
-InfniteYield.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-InfniteYield.BorderColor3 = Color3.fromRGB(0, 0, 0)
-InfniteYield.BorderSizePixel = 0
-InfniteYield.Position = UDim2.new(0.244016603, 0, 0.176914513, 0)
-InfniteYield.Size = UDim2.new(0, 192, 0, 50)
-InfniteYield.Font = Enum.Font.RobotoMono
-InfniteYield.Text = "Infinite Yield"
-InfniteYield.TextColor3 = Color3.fromRGB(255, 255, 255)
-InfniteYield.TextScaled = true
-InfniteYield.TextSize = 14.000
-InfniteYield.TextWrapped = true
-
-UICorner_2.CornerRadius = UDim.new(0, 9)
-UICorner_2.Parent = InfniteYield
-InfniteYield.MouseButton1Down:Connect(function()
+InfiniteYield.Name = "InfiniteYield"
+InfiniteYield.Parent = Addons
+InfiniteYield.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+InfiniteYield.BorderColor3 = Color3.fromRGB(255, 255, 255)
+InfiniteYield.Position = UDim2.new(0.0891719759, 0, 0.0437828377, 0)
+InfiniteYield.Size = UDim2.new(0, 129, 0, 27)
+InfiniteYield.Font = Enum.Font.RobotoMono
+InfiniteYield.Text = "Infinite Yield"
+InfiniteYield.TextColor3 = Color3.fromRGB(255, 255, 255)
+InfiniteYield.TextScaled = true
+InfiniteYield.TextSize = 14.000
+InfiniteYield.TextWrapped = true
+InfiniteYield.MouseButton1Down:Connect(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
 end)
 
 SeekPlush.Name = "SeekPlush"
-SeekPlush.Parent = Main
-SeekPlush.AnchorPoint = Vector2.new(0.5, 0.5)
-SeekPlush.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-SeekPlush.BorderColor3 = Color3.fromRGB(0, 0, 0)
-SeekPlush.BorderSizePixel = 0
-SeekPlush.Position = UDim2.new(0.754705369, 0, 0.176914513, 0)
-SeekPlush.Size = UDim2.new(0, 192, 0, 50)
+SeekPlush.Parent = Addons
+SeekPlush.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+SeekPlush.BorderColor3 = Color3.fromRGB(255, 255, 255)
+SeekPlush.Position = UDim2.new(0.0891719759, 0, 0.105078809, 0)
+SeekPlush.Size = UDim2.new(0, 129, 0, 27)
 SeekPlush.Font = Enum.Font.RobotoMono
 SeekPlush.Text = "Seek Plush"
 SeekPlush.TextColor3 = Color3.fromRGB(255, 255, 255)
 SeekPlush.TextScaled = true
 SeekPlush.TextSize = 14.000
 SeekPlush.TextWrapped = true
-
-UICorner_3.CornerRadius = UDim.new(0, 9)
-UICorner_3.Parent = SeekPlush
-SeekGun.MouseButton1Down:Connect(function()
+SeekPlush.MouseButton1Down:Connect(function()
 	local plr = game.Players.LocalPlayer
 	local hum = plr.Character:WaitForChild("Humanoid")
 
@@ -127,67 +284,117 @@ SeekGun.MouseButton1Down:Connect(function()
 	end)
 end)
 
-SeekGun.Name = "SeekGun"
-SeekGun.Parent = Main
-SeekGun.AnchorPoint = Vector2.new(0.5, 0.5)
-SeekGun.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-SeekGun.BorderColor3 = Color3.fromRGB(0, 0, 0)
-SeekGun.BorderSizePixel = 0
-SeekGun.Position = UDim2.new(0.244016603, 0, 0.33299917, 0)
-SeekGun.Size = UDim2.new(0, 192, 0, 50)
-SeekGun.Font = Enum.Font.RobotoMono
-SeekGun.Text = "Seek Gun"
-SeekGun.TextColor3 = Color3.fromRGB(255, 255, 255)
-SeekGun.TextScaled = true
-SeekGun.TextSize = 14.000
-SeekGun.TextWrapped = true
-
-UICorner_4.CornerRadius = UDim.new(0, 9)
-UICorner_4.Parent = SeekGun
-SeekGun.MouseButton1Down:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/Scripts/main/seekgun.lua"))()
+PrisonLifeScript.Name = "PrisonLifeScript"
+PrisonLifeScript.Parent = Addons
+PrisonLifeScript.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+PrisonLifeScript.BorderColor3 = Color3.fromRGB(255, 255, 255)
+PrisonLifeScript.Position = UDim2.new(0.0891719759, 0, 0.164623469, 0)
+PrisonLifeScript.Size = UDim2.new(0, 129, 0, 27)
+PrisonLifeScript.Font = Enum.Font.RobotoMono
+PrisonLifeScript.Text = "PrisonLife Script"
+PrisonLifeScript.TextColor3 = Color3.fromRGB(255, 255, 255)
+PrisonLifeScript.TextScaled = true
+PrisonLifeScript.TextSize = 14.000
+PrisonLifeScript.TextWrapped = true
+PrisonLifeScript.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))()
 end)
 
-RocketLauncher.Name = "RocketLauncher"
-RocketLauncher.Parent = Main
-RocketLauncher.AnchorPoint = Vector2.new(0.5, 0.5)
-RocketLauncher.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-RocketLauncher.BorderColor3 = Color3.fromRGB(0, 0, 0)
-RocketLauncher.BorderSizePixel = 0
-RocketLauncher.Position = UDim2.new(0.752330065, 0, 0.33299917, 0)
-RocketLauncher.Size = UDim2.new(0, 192, 0, 50)
-RocketLauncher.Font = Enum.Font.RobotoMono
-RocketLauncher.Text = "Rocket Launcher"
-RocketLauncher.TextColor3 = Color3.fromRGB(255, 255, 255)
-RocketLauncher.TextScaled = true
-RocketLauncher.TextSize = 14.000
-RocketLauncher.TextWrapped = true
+Name_2.Name = "Name"
+Name_2.Parent = All
+Name_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name_2.BackgroundTransparency = 1.000
+Name_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name_2.BorderSizePixel = 0
+Name_2.Position = UDim2.new(-0.0340715498, 0, 0, 0)
+Name_2.Size = UDim2.new(0, 130, 0, 28)
+Name_2.Font = Enum.Font.RobotoMono
+Name_2.Text = "LightX"
+Name_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Name_2.TextScaled = true
+Name_2.TextSize = 14.000
+Name_2.TextWrapped = true
 
-UICorner_5.CornerRadius = UDim.new(0, 9)
-UICorner_5.Parent = RocketLauncher
-RocketLauncher.MouseButton1Down:Connect(function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/Scripts/main/rocketLauncher.lua"))()
-end)
+Minimize.Name = "Minimize"
+Minimize.Parent = All
+Minimize.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Minimize.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.Position = UDim2.new(0.942078352, 0, 0, 0)
+Minimize.Size = UDim2.new(0, 34, 0, 34)
+Minimize.Font = Enum.Font.RobotoMono
+Minimize.Text = "-"
+Minimize.TextColor3 = Color3.fromRGB(255, 255, 255)
+Minimize.TextScaled = true
+Minimize.TextSize = 14.000
+Minimize.TextWrapped = true
 
-A1000Tablet.Name = "A-1000Tablet"
-A1000Tablet.Parent = Main
-A1000Tablet.AnchorPoint = Vector2.new(0.5, 0.5)
-A1000Tablet.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
-A1000Tablet.BorderColor3 = Color3.fromRGB(0, 0, 0)
-A1000Tablet.BorderSizePixel = 0
-A1000Tablet.Position = UDim2.new(0.244016528, 0, 0.499665767, 0)
-A1000Tablet.Size = UDim2.new(0, 192, 0, 50)
-A1000Tablet.Font = Enum.Font.RobotoMono
-A1000Tablet.Text = "A-1000 Tablet"
-A1000Tablet.TextColor3 = Color3.fromRGB(255, 255, 255)
-A1000Tablet.TextScaled = true
-A1000Tablet.TextSize = 14.000
-A1000Tablet.TextWrapped = true
+Open.Name = "Open"
+Open.Parent = LightX
+Open.AnchorPoint = Vector2.new(0.5, 0.5)
+Open.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Open.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Open.Position = UDim2.new(0.0304773822, 0, 0.517906725, 0)
+Open.Size = UDim2.new(0, 98, 0, 35)
+Open.Font = Enum.Font.RobotoMono
+Open.Text = "Open Gui"
+Open.TextColor3 = Color3.fromRGB(255, 255, 255)
+Open.TextScaled = true
+Open.TextSize = 14.000
+Open.TextWrapped = true
 
-UICorner_6.CornerRadius = UDim.new(0, 9)
-UICorner_6.Parent = A1000Tablet
-A1000Tablet.MouseButton1Down:Connect(function()
-	_G.scanner_fps = 30
-	_G.disable_static = false
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/Scripts/main/Scanner.lua"))()
-end)
+-- Scripts:
+
+local function GJMDYV_fake_script() -- EnterNumbers.LocalScript 
+	local script = Instance.new('LocalScript', EnterNumbers)
+
+	wait(2)
+	local plr = game.Players.LocalPlayer
+	local char = plr.Character
+	local hum = char:WaitForChild("Humanoid")
+	
+	local limit = 75
+	
+	script.Parent.Changed:Connect(function()
+		hum.WalkSpeed = script.Parent.Text
+		
+		if hum.WalkSpeed >= limit then
+			script.Parent.Text = "75"
+		end
+	end)
+end
+coroutine.wrap(GJMDYV_fake_script)()
+local function ROQVVS_fake_script() -- SaveSettings.LocalScript 
+	local script = Instance.new('LocalScript', SaveSettings)
+
+	local cam = game.Workspace.Camera
+	local player = game.Players.LocalPlayer
+	local button = script.Parent
+	
+	local userGameSettings = UserSettings():GetService("UserGameSettings")
+	local mouseSensitivitySetting = userGameSettings.MouseSensitivity
+	
+	local function onActivated()
+		cam.FieldOfView = player.PlayerGui.LightX.All.Main.FovChanger.EnterNumbers.Text
+		player.PlayerGui.LightX.All.Visible = false
+	end
+	
+	button.Activated:Connect(onActivated)
+end
+coroutine.wrap(ROQVVS_fake_script)()
+local function OKPO_fake_script() -- Minimize.LocalScript 
+	local script = Instance.new('LocalScript', Minimize)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(OKPO_fake_script)()
+local function PJHPYL_fake_script() -- Open.LocalScript 
+	local script = Instance.new('LocalScript', Open)
+
+	script.Parent.Parent.All.Visible = false
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.All.Visible = true
+	end)
+end
+coroutine.wrap(PJHPYL_fake_script)()
