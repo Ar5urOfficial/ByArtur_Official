@@ -21,6 +21,8 @@ local Name = Instance.new("TextLabel")
 local InfiniteYield = Instance.new("TextButton")
 local SeekPlush = Instance.new("TextButton")
 local PrisonLifeScript = Instance.new("TextButton")
+local MspaintV3 = Instance.new("TextButton")
+local FEDrawScript = Instance.new("TextButton")
 local Name_2 = Instance.new("TextLabel")
 local Minimize = Instance.new("TextButton")
 local Open = Instance.new("TextButton")
@@ -288,7 +290,7 @@ PrisonLifeScript.Name = "PrisonLifeScript"
 PrisonLifeScript.Parent = Addons
 PrisonLifeScript.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 PrisonLifeScript.BorderColor3 = Color3.fromRGB(255, 255, 255)
-PrisonLifeScript.Position = UDim2.new(0.0891719759, 0, 0.164623469, 0)
+PrisonLifeScript.Position = UDim2.new(0.0891719759, 0, 0.16987741, 0)
 PrisonLifeScript.Size = UDim2.new(0, 129, 0, 27)
 PrisonLifeScript.Font = Enum.Font.RobotoMono
 PrisonLifeScript.Text = "PrisonLife Script"
@@ -298,6 +300,38 @@ PrisonLifeScript.TextSize = 14.000
 PrisonLifeScript.TextWrapped = true
 PrisonLifeScript.MouseButton1Down:Connect(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))()
+end)
+
+MspaintV3.Name = "MspaintV3"
+MspaintV3.Parent = Addons
+MspaintV3.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+MspaintV3.BorderColor3 = Color3.fromRGB(255, 255, 255)
+MspaintV3.Position = UDim2.new(0.0891719759, 0, 0.229422063, 0)
+MspaintV3.Size = UDim2.new(0, 129, 0, 27)
+MspaintV3.Font = Enum.Font.RobotoMono
+MspaintV3.Text = "Mspaint V3"
+MspaintV3.TextColor3 = Color3.fromRGB(255, 255, 255)
+MspaintV3.TextScaled = true
+MspaintV3.TextSize = 14.000
+MspaintV3.TextWrapped = true
+MspaintV3.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/mspaint/main/main.lua"))()
+end)
+
+FEDrawScript.Name = "FEDrawScript"
+FEDrawScript.Parent = Addons
+FEDrawScript.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+FEDrawScript.BorderColor3 = Color3.fromRGB(255, 255, 255)
+FEDrawScript.Position = UDim2.new(0.0891719759, 0, 0.288966715, 0)
+FEDrawScript.Size = UDim2.new(0, 129, 0, 27)
+FEDrawScript.Font = Enum.Font.RobotoMono
+FEDrawScript.Text = "FE Draw Script"
+FEDrawScript.TextColor3 = Color3.fromRGB(255, 255, 255)
+FEDrawScript.TextScaled = true
+FEDrawScript.TextSize = 14.000
+FEDrawScript.TextWrapped = true
+FEDrawScript.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet('https://pastebin.com/raw/q6WWVCKC'))()
 end)
 
 Name_2.Name = "Name"
@@ -344,7 +378,7 @@ Open.TextWrapped = true
 
 -- Scripts:
 
-local function GJMDYV_fake_script() -- EnterNumbers.LocalScript 
+local function COSKTG_fake_script() -- EnterNumbers.LocalScript 
 	local script = Instance.new('LocalScript', EnterNumbers)
 
 	wait(2)
@@ -362,8 +396,8 @@ local function GJMDYV_fake_script() -- EnterNumbers.LocalScript
 		end
 	end)
 end
-coroutine.wrap(GJMDYV_fake_script)()
-local function ROQVVS_fake_script() -- SaveSettings.LocalScript 
+coroutine.wrap(COSKTG_fake_script)()
+local function OUZBXSX_fake_script() -- SaveSettings.LocalScript 
 	local script = Instance.new('LocalScript', SaveSettings)
 
 	local cam = game.Workspace.Camera
@@ -380,16 +414,16 @@ local function ROQVVS_fake_script() -- SaveSettings.LocalScript
 	
 	button.Activated:Connect(onActivated)
 end
-coroutine.wrap(ROQVVS_fake_script)()
-local function OKPO_fake_script() -- Minimize.LocalScript 
+coroutine.wrap(OUZBXSX_fake_script)()
+local function SBZAPTN_fake_script() -- Minimize.LocalScript 
 	local script = Instance.new('LocalScript', Minimize)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(OKPO_fake_script)()
-local function PJHPYL_fake_script() -- Open.LocalScript 
+coroutine.wrap(SBZAPTN_fake_script)()
+local function QRLNSZ_fake_script() -- Open.LocalScript 
 	local script = Instance.new('LocalScript', Open)
 
 	script.Parent.Parent.All.Visible = false
@@ -397,4 +431,4 @@ local function PJHPYL_fake_script() -- Open.LocalScript
 		script.Parent.Parent.All.Visible = true
 	end)
 end
-coroutine.wrap(PJHPYL_fake_script)()
+coroutine.wrap(QRLNSZ_fake_script)()
