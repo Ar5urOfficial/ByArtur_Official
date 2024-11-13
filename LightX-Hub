@@ -1,0 +1,264 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local LightXHub = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local SideFrame = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Logo = Instance.new("TextLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local UICorner_3 = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local Tab2Button = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local Tab1Button = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local HomeTab = Instance.new("Frame")
+local UICorner_6 = Instance.new("UICorner")
+local Section = Instance.new("TextLabel")
+local UICorner_7 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_8 = Instance.new("UICorner")
+local SectionTitle = Instance.new("TextLabel")
+local LightXScriptsTab = Instance.new("Frame")
+local UICorner_9 = Instance.new("UICorner")
+local Section_2 = Instance.new("TextLabel")
+local UICorner_10 = Instance.new("UICorner")
+local LightX = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local SectionTitle_2 = Instance.new("TextLabel")
+
+--Properties:
+
+LightXHub.Name = "LightX-Hub"
+LightXHub.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+LightXHub.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+LightXHub.ResetOnSpawn = false
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = LightXHub
+MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+MainFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+MainFrame.Size = UDim2.new(0, 667, 0, 417)
+MainFrame.Active = true
+MainFrame.Draggable = true
+
+UICorner.Parent = MainFrame
+
+SideFrame.Name = "SideFrame"
+SideFrame.Parent = MainFrame
+SideFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+SideFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+SideFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SideFrame.BorderSizePixel = 0
+SideFrame.Position = UDim2.new(0.091454275, 0, 0.5, 0)
+SideFrame.Size = UDim2.new(0, 122, 0, 417)
+
+UICorner_2.Parent = SideFrame
+
+Logo.Name = "Logo"
+Logo.Parent = SideFrame
+Logo.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Logo.BorderSizePixel = 0
+Logo.Position = UDim2.new(0.05185185, 0, 0.0167865716, 0)
+Logo.Size = UDim2.new(0, 44, 0, 43)
+Logo.Font = Enum.Font.RobotoMono
+Logo.Text = "LightX"
+Logo.TextColor3 = Color3.fromRGB(255, 255, 255)
+Logo.TextScaled = true
+Logo.TextSize = 14.000
+Logo.TextStrokeColor3 = Color3.fromRGB(27, 27, 27)
+Logo.TextWrapped = true
+
+UIAspectRatioConstraint.Parent = Logo
+
+UICorner_3.CornerRadius = UDim.new(1, 0)
+UICorner_3.Parent = Logo
+
+Title.Name = "Title"
+Title.Parent = SideFrame
+Title.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.141431466, 0, 0.0335731432, 0)
+Title.Size = UDim2.new(0, 133, 0, 28)
+Title.Font = Enum.Font.RobotoMono
+Title.Text = "LightX"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 16.000
+Title.TextWrapped = true
+
+Tab2Button.Name = "Tab2Button"
+Tab2Button.Parent = SideFrame
+Tab2Button.BackgroundColor3 = Color3.fromRGB(1, 90, 255)
+Tab2Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tab2Button.BorderSizePixel = 0
+Tab2Button.Position = UDim2.new(0.0583315976, 0, 0.244404674, 0)
+Tab2Button.Size = UDim2.new(0, 107, 0, 28)
+Tab2Button.Font = Enum.Font.RobotoMono
+Tab2Button.Text = "LightX Scripts"
+Tab2Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tab2Button.TextSize = 14.000
+
+UICorner_4.Parent = Tab2Button
+
+Tab1Button.Name = "Tab1Button"
+Tab1Button.Parent = SideFrame
+Tab1Button.BackgroundColor3 = Color3.fromRGB(1, 90, 255)
+Tab1Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Tab1Button.BorderSizePixel = 0
+Tab1Button.Position = UDim2.new(0.0583315976, 0, 0.150011018, 0)
+Tab1Button.Size = UDim2.new(0, 107, 0, 28)
+Tab1Button.Font = Enum.Font.RobotoMono
+Tab1Button.Text = "Home"
+Tab1Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+Tab1Button.TextSize = 19.000
+
+UICorner_5.Parent = Tab1Button
+
+HomeTab.Name = "HomeTab"
+HomeTab.Parent = MainFrame
+HomeTab.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+HomeTab.BackgroundTransparency = 1.000
+HomeTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+HomeTab.BorderSizePixel = 0
+HomeTab.Position = UDim2.new(0.18290855, 0, 0, 0)
+HomeTab.Size = UDim2.new(0, 545, 0, 417)
+
+UICorner_6.Parent = HomeTab
+
+Section.Name = "Section"
+Section.Parent = HomeTab
+Section.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Section.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Section.BorderSizePixel = 0
+Section.Position = UDim2.new(0.0146788992, 0, 0.0167865716, 0)
+Section.Size = UDim2.new(0, 531, 0, 403)
+Section.Font = Enum.Font.RobotoMono
+Section.Text = ""
+Section.TextColor3 = Color3.fromRGB(255, 255, 255)
+Section.TextSize = 14.000
+
+UICorner_7.Parent = Section
+
+TextLabel.Parent = Section
+TextLabel.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.00993413292, 0, 0.0670744553, 0)
+TextLabel.Size = UDim2.new(0, 520, 0, 50)
+TextLabel.Font = Enum.Font.RobotoMono
+TextLabel.Text = " Made By: Artur_Official"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 19.000
+TextLabel.TextWrapped = true
+TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_8.Parent = TextLabel
+
+SectionTitle.Name = "SectionTitle"
+SectionTitle.Parent = HomeTab
+SectionTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SectionTitle.BackgroundTransparency = 1.000
+SectionTitle.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SectionTitle.BorderSizePixel = 0
+SectionTitle.Position = UDim2.new(-0.117431194, 0, -0.0191846527, 0)
+SectionTitle.Size = UDim2.new(0, 200, 0, 50)
+SectionTitle.Font = Enum.Font.RobotoMono
+SectionTitle.Text = "Home"
+SectionTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+SectionTitle.TextSize = 19.000
+
+LightXScriptsTab.Name = "LightXScriptsTab"
+LightXScriptsTab.Parent = MainFrame
+LightXScriptsTab.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+LightXScriptsTab.BackgroundTransparency = 1.000
+LightXScriptsTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LightXScriptsTab.BorderSizePixel = 0
+LightXScriptsTab.Position = UDim2.new(0.18290855, 0, 0, 0)
+LightXScriptsTab.Size = UDim2.new(0, 545, 0, 417)
+LightXScriptsTab.Visible = false
+
+UICorner_9.Parent = LightXScriptsTab
+
+Section_2.Name = "Section"
+Section_2.Parent = LightXScriptsTab
+Section_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Section_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Section_2.BorderSizePixel = 0
+Section_2.Position = UDim2.new(0.0146788992, 0, 0.0167865716, 0)
+Section_2.Size = UDim2.new(0, 531, 0, 403)
+Section_2.Font = Enum.Font.RobotoMono
+Section_2.Text = ""
+Section_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Section_2.TextSize = 14.000
+
+UICorner_10.Parent = Section_2
+
+LightX.Name = "LightX"
+LightX.Parent = LightXScriptsTab
+LightX.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+LightX.BorderColor3 = Color3.fromRGB(0, 0, 0)
+LightX.BorderSizePixel = 0
+LightX.Position = UDim2.new(0.0246697385, 0, 0.0813788921, 0)
+LightX.Size = UDim2.new(0, 520, 0, 50)
+LightX.Font = Enum.Font.RobotoMono
+LightX.Text = " LightX"
+LightX.TextColor3 = Color3.fromRGB(255, 255, 255)
+LightX.TextSize = 20.000
+LightX.TextXAlignment = Enum.TextXAlignment.Left
+LightX.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Ar5urOfficial/ByArtur_Official/refs/heads/main/LightX"))()
+end)
+
+UICorner_11.Parent = LightX
+
+SectionTitle_2.Name = "SectionTitle"
+SectionTitle_2.Parent = LightXScriptsTab
+SectionTitle_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SectionTitle_2.BackgroundTransparency = 1.000
+SectionTitle_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SectionTitle_2.BorderSizePixel = 0
+SectionTitle_2.Position = UDim2.new(-0.0440366976, 0, -0.0191846527, 0)
+SectionTitle_2.Size = UDim2.new(0, 200, 0, 50)
+SectionTitle_2.Font = Enum.Font.RobotoMono
+SectionTitle_2.Text = "LightXScripts"
+SectionTitle_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SectionTitle_2.TextSize = 19.000
+
+-- Scripts:
+
+local function DBLKHA_fake_script() -- Tab2Button.LocalScript 
+	local script = Instance.new('LocalScript', Tab2Button)
+
+	local mouse = script.Parent
+	local HomeTab = script.Parent.Parent.Parent.Parent.MainFrame.HomeTab
+	local LightXScriptsTab = script.Parent.Parent.Parent.Parent.MainFrame.LightXScriptsTab
+	
+	mouse.MouseButton1Click:Connect(function()
+		HomeTab.Visible = false
+		LightXScriptsTab.Visible = true
+	end)
+end
+coroutine.wrap(DBLKHA_fake_script)()
+local function EFICFGY_fake_script() -- Tab1Button.LocalScript 
+	local script = Instance.new('LocalScript', Tab1Button)
+
+	local mouse = script.Parent
+	local HomeTab = script.Parent.Parent.Parent.Parent.MainFrame.HomeTab
+	local LightXScriptsTab = script.Parent.Parent.Parent.Parent.MainFrame.LightXScriptsTab
+	
+	mouse.MouseButton1Click:Connect(function()
+		HomeTab.Visible = true
+		LightXScriptsTab.Visible = false
+	end)
+end
+coroutine.wrap(EFICFGY_fake_script)()
