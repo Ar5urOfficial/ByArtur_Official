@@ -1,0 +1,822 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local LightX = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local SideFrame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local MainTabButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local VisualsTabButton = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local AddonsTabButton = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local CreditsTabButton = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local ScriptsTabButton = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local Logo = Instance.new("TextLabel")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local UICorner_7 = Instance.new("UICorner")
+local UICorner_8 = Instance.new("UICorner")
+local Name = Instance.new("TextLabel")
+local PanelFrame = Instance.new("Frame")
+local UICorner_9 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local MainTab = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local SpeedChanger = Instance.new("Frame")
+local SpeedChangerName = Instance.new("TextLabel")
+local EnterNumbers = Instance.new("TextBox")
+local UICorner_11 = Instance.new("UICorner")
+local UICorner_12 = Instance.new("UICorner")
+local VisualsTab = Instance.new("Frame")
+local TextLabel_2 = Instance.new("TextLabel")
+local FovChanger = Instance.new("Frame")
+local FovChangerName = Instance.new("TextLabel")
+local EnterNumbers_2 = Instance.new("TextBox")
+local UICorner_13 = Instance.new("UICorner")
+local SaveSettings = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local UICorner_15 = Instance.new("UICorner")
+local Esp = Instance.new("Frame")
+local FovChangerName_2 = Instance.new("TextLabel")
+local PlayerEsp = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local UICorner_17 = Instance.new("UICorner")
+local AddonsTab = Instance.new("Frame")
+local TextLabel_3 = Instance.new("TextLabel")
+local SeekPlush = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local CreditsTab = Instance.new("Frame")
+local TextLabel_4 = Instance.new("TextLabel")
+local MadeBy = Instance.new("TextLabel")
+local UICorner_19 = Instance.new("UICorner")
+local ScriptsTab = Instance.new("Frame")
+local TextLabel_5 = Instance.new("TextLabel")
+local PrisonLifeScript = Instance.new("TextButton")
+local UICorner_20 = Instance.new("UICorner")
+local MspaintV3 = Instance.new("TextButton")
+local UICorner_21 = Instance.new("UICorner")
+local InfiniteYield = Instance.new("TextButton")
+local UICorner_22 = Instance.new("UICorner")
+local FEDrawScript = Instance.new("TextButton")
+local UICorner_23 = Instance.new("UICorner")
+local OpenFrame = Instance.new("TextButton")
+local UICorner_24 = Instance.new("UICorner")
+
+--Properties:
+
+LightX.Name = "LightX"
+LightX.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+LightX.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+LightX.ResetOnSpawn = false
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = LightX
+MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+MainFrame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+MainFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+MainFrame.Size = UDim2.new(0, 888, 0, 526)
+MainFrame.Active = true
+MainFrame.Draggable = true
+
+SideFrame.Name = "SideFrame"
+SideFrame.Parent = MainFrame
+SideFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+SideFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SideFrame.BorderSizePixel = 0
+SideFrame.Size = UDim2.new(0, 138, 0, 526)
+
+UICorner.CornerRadius = UDim.new(0, 4)
+UICorner.Parent = SideFrame
+
+MainTabButton.Name = "MainTabButton"
+MainTabButton.Parent = SideFrame
+MainTabButton.BackgroundColor3 = Color3.fromRGB(0, 49, 227)
+MainTabButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainTabButton.BorderSizePixel = 0
+MainTabButton.Position = UDim2.new(0.0434782617, 0, 0.131178707, 0)
+MainTabButton.Size = UDim2.new(0, 126, 0, 39)
+MainTabButton.Font = Enum.Font.RobotoMono
+MainTabButton.Text = "Main"
+MainTabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+MainTabButton.TextSize = 19.000
+
+UICorner_2.CornerRadius = UDim.new(0, 4)
+UICorner_2.Parent = MainTabButton
+
+VisualsTabButton.Name = "VisualsTabButton"
+VisualsTabButton.Parent = SideFrame
+VisualsTabButton.BackgroundColor3 = Color3.fromRGB(0, 49, 227)
+VisualsTabButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VisualsTabButton.BorderSizePixel = 0
+VisualsTabButton.Position = UDim2.new(0.0434782617, 0, 0.218631178, 0)
+VisualsTabButton.Size = UDim2.new(0, 126, 0, 39)
+VisualsTabButton.Font = Enum.Font.RobotoMono
+VisualsTabButton.Text = "Visuals"
+VisualsTabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+VisualsTabButton.TextSize = 19.000
+
+UICorner_3.CornerRadius = UDim.new(0, 4)
+UICorner_3.Parent = VisualsTabButton
+
+AddonsTabButton.Name = "AddonsTabButton"
+AddonsTabButton.Parent = SideFrame
+AddonsTabButton.BackgroundColor3 = Color3.fromRGB(0, 49, 227)
+AddonsTabButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AddonsTabButton.BorderSizePixel = 0
+AddonsTabButton.Position = UDim2.new(0.0434782617, 0, 0.306083649, 0)
+AddonsTabButton.Size = UDim2.new(0, 126, 0, 39)
+AddonsTabButton.Font = Enum.Font.RobotoMono
+AddonsTabButton.Text = "Addons"
+AddonsTabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+AddonsTabButton.TextSize = 19.000
+
+UICorner_4.CornerRadius = UDim.new(0, 4)
+UICorner_4.Parent = AddonsTabButton
+
+CreditsTabButton.Name = "CreditsTabButton"
+CreditsTabButton.Parent = SideFrame
+CreditsTabButton.BackgroundColor3 = Color3.fromRGB(0, 49, 227)
+CreditsTabButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CreditsTabButton.BorderSizePixel = 0
+CreditsTabButton.Position = UDim2.new(0.0434782617, 0, 0.477186322, 0)
+CreditsTabButton.Size = UDim2.new(0, 126, 0, 39)
+CreditsTabButton.Font = Enum.Font.RobotoMono
+CreditsTabButton.Text = "Credits"
+CreditsTabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CreditsTabButton.TextSize = 19.000
+
+UICorner_5.CornerRadius = UDim.new(0, 4)
+UICorner_5.Parent = CreditsTabButton
+
+ScriptsTabButton.Name = "ScriptsTabButton"
+ScriptsTabButton.Parent = SideFrame
+ScriptsTabButton.BackgroundColor3 = Color3.fromRGB(0, 49, 227)
+ScriptsTabButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptsTabButton.BorderSizePixel = 0
+ScriptsTabButton.Position = UDim2.new(0.0434782617, 0, 0.391634971, 0)
+ScriptsTabButton.Size = UDim2.new(0, 126, 0, 39)
+ScriptsTabButton.Font = Enum.Font.RobotoMono
+ScriptsTabButton.Text = "Scripts"
+ScriptsTabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ScriptsTabButton.TextSize = 19.000
+
+UICorner_6.CornerRadius = UDim.new(0, 4)
+UICorner_6.Parent = ScriptsTabButton
+
+Logo.Name = "Logo"
+Logo.Parent = MainFrame
+Logo.BackgroundColor3 = Color3.fromRGB(19, 116, 190)
+Logo.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Logo.BorderSizePixel = 0
+Logo.Position = UDim2.new(0.00675675692, 0, 0.0152091254, 0)
+Logo.Size = UDim2.new(0, 200, 0, 50)
+Logo.Font = Enum.Font.RobotoMono
+Logo.Text = "LightX"
+Logo.TextColor3 = Color3.fromRGB(255, 255, 255)
+Logo.TextSize = 14.000
+
+UIAspectRatioConstraint.Parent = Logo
+
+UICorner_7.CornerRadius = UDim.new(1, 0)
+UICorner_7.Parent = Logo
+
+UICorner_8.CornerRadius = UDim.new(0, 4)
+UICorner_8.Parent = MainFrame
+
+Name.Name = "Name"
+Name.Parent = MainFrame
+Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name.BackgroundTransparency = 1.000
+Name.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name.BorderSizePixel = 0
+Name.Position = UDim2.new(-0.00900900923, 0, 0.0152091254, 0)
+Name.Size = UDim2.new(0, 200, 0, 50)
+Name.Font = Enum.Font.RobotoMono
+Name.Text = "LightX"
+Name.TextColor3 = Color3.fromRGB(255, 255, 255)
+Name.TextSize = 16.000
+
+PanelFrame.Name = "PanelFrame"
+PanelFrame.Parent = MainFrame
+PanelFrame.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+PanelFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PanelFrame.BorderSizePixel = 0
+PanelFrame.Position = UDim2.new(0.148648649, 0, 0, 0)
+PanelFrame.Size = UDim2.new(0, 756, 0, 50)
+
+UICorner_9.CornerRadius = UDim.new(0, 4)
+UICorner_9.Parent = PanelFrame
+
+TextButton.Parent = PanelFrame
+TextButton.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.933862448, 0, 0, 0)
+TextButton.Size = UDim2.new(0, 50, 0, 50)
+TextButton.Font = Enum.Font.RobotoMono
+TextButton.Text = "-"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextSize = 38.000
+TextButton.TextWrapped = true
+
+UICorner_10.CornerRadius = UDim.new(0, 4)
+UICorner_10.Parent = TextButton
+
+MainTab.Name = "MainTab"
+MainTab.Parent = MainFrame
+MainTab.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+MainTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainTab.BorderSizePixel = 0
+MainTab.Position = UDim2.new(0.155405402, 0, 0.0950570628, 0)
+MainTab.Size = UDim2.new(0, 744, 0, 469)
+
+TextLabel.Parent = MainTab
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 76, 0, 38)
+TextLabel.Font = Enum.Font.RobotoMono
+TextLabel.Text = "Main"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 22.000
+
+SpeedChanger.Name = "SpeedChanger"
+SpeedChanger.Parent = MainTab
+SpeedChanger.AnchorPoint = Vector2.new(0.5, 0.5)
+SpeedChanger.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+SpeedChanger.BorderColor3 = Color3.fromRGB(255, 255, 255)
+SpeedChanger.BorderSizePixel = 0
+SpeedChanger.Position = UDim2.new(0.145500183, 0, 0.162342653, 0)
+SpeedChanger.Size = UDim2.new(0, 201, 0, 78)
+
+SpeedChangerName.Name = "SpeedChangerName"
+SpeedChangerName.Parent = SpeedChanger
+SpeedChangerName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SpeedChangerName.BackgroundTransparency = 1.000
+SpeedChangerName.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SpeedChangerName.BorderSizePixel = 0
+SpeedChangerName.Size = UDim2.new(0, 64, 0, 22)
+SpeedChangerName.Font = Enum.Font.RobotoMono
+SpeedChangerName.Text = "Speed"
+SpeedChangerName.TextColor3 = Color3.fromRGB(255, 255, 255)
+SpeedChangerName.TextScaled = true
+SpeedChangerName.TextSize = 14.000
+SpeedChangerName.TextWrapped = true
+
+EnterNumbers.Name = "EnterNumbers"
+EnterNumbers.Parent = SpeedChanger
+EnterNumbers.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+EnterNumbers.BorderColor3 = Color3.fromRGB(255, 255, 255)
+EnterNumbers.BorderSizePixel = 0
+EnterNumbers.Position = UDim2.new(0.0547263697, 0, 0.358974367, 0)
+EnterNumbers.Size = UDim2.new(0, 179, 0, 41)
+EnterNumbers.Font = Enum.Font.RobotoMono
+EnterNumbers.PlaceholderText = "0-75"
+EnterNumbers.Text = ""
+EnterNumbers.TextColor3 = Color3.fromRGB(255, 255, 255)
+EnterNumbers.TextScaled = true
+EnterNumbers.TextSize = 46.000
+EnterNumbers.TextWrapped = true
+
+UICorner_11.CornerRadius = UDim.new(0, 4)
+UICorner_11.Parent = EnterNumbers
+
+UICorner_12.CornerRadius = UDim.new(0, 4)
+UICorner_12.Parent = SpeedChanger
+
+VisualsTab.Name = "VisualsTab"
+VisualsTab.Parent = MainFrame
+VisualsTab.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+VisualsTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VisualsTab.BorderSizePixel = 0
+VisualsTab.Position = UDim2.new(0.155405402, 0, 0.0950570628, 0)
+VisualsTab.Size = UDim2.new(0, 744, 0, 469)
+VisualsTab.Visible = false
+
+TextLabel_2.Parent = VisualsTab
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Size = UDim2.new(0, 76, 0, 38)
+TextLabel_2.Font = Enum.Font.RobotoMono
+TextLabel_2.Text = "Visuals"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 22.000
+
+FovChanger.Name = "FovChanger"
+FovChanger.Parent = VisualsTab
+FovChanger.AnchorPoint = Vector2.new(0.5, 0.5)
+FovChanger.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+FovChanger.BorderColor3 = Color3.fromRGB(255, 255, 255)
+FovChanger.BorderSizePixel = 0
+FovChanger.Position = UDim2.new(0.143661499, 0, 0.162342653, 0)
+FovChanger.Size = UDim2.new(0, 201, 0, 78)
+
+FovChangerName.Name = "FovChangerName"
+FovChangerName.Parent = FovChanger
+FovChangerName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FovChangerName.BackgroundTransparency = 1.000
+FovChangerName.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FovChangerName.BorderSizePixel = 0
+FovChangerName.Size = UDim2.new(0, 64, 0, 22)
+FovChangerName.Font = Enum.Font.RobotoMono
+FovChangerName.Text = "Fov"
+FovChangerName.TextColor3 = Color3.fromRGB(255, 255, 255)
+FovChangerName.TextScaled = true
+FovChangerName.TextSize = 14.000
+FovChangerName.TextWrapped = true
+
+EnterNumbers_2.Name = "EnterNumbers"
+EnterNumbers_2.Parent = FovChanger
+EnterNumbers_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+EnterNumbers_2.BorderColor3 = Color3.fromRGB(255, 255, 255)
+EnterNumbers_2.BorderSizePixel = 0
+EnterNumbers_2.Position = UDim2.new(0.318407953, 0, 0.358974367, 0)
+EnterNumbers_2.Size = UDim2.new(0, 126, 0, 41)
+EnterNumbers_2.Font = Enum.Font.RobotoMono
+EnterNumbers_2.PlaceholderText = "0-120"
+EnterNumbers_2.Text = ""
+EnterNumbers_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+EnterNumbers_2.TextScaled = true
+EnterNumbers_2.TextSize = 46.000
+EnterNumbers_2.TextWrapped = true
+
+UICorner_13.CornerRadius = UDim.new(0, 4)
+UICorner_13.Parent = EnterNumbers_2
+
+SaveSettings.Name = "SaveSettings"
+SaveSettings.Parent = FovChanger
+SaveSettings.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+SaveSettings.BorderColor3 = Color3.fromRGB(255, 255, 255)
+SaveSettings.BorderSizePixel = 0
+SaveSettings.Position = UDim2.new(0.0597014911, 0, 0.371794879, 0)
+SaveSettings.Size = UDim2.new(0, 40, 0, 40)
+SaveSettings.Font = Enum.Font.RobotoMono
+SaveSettings.Text = "Save"
+SaveSettings.TextColor3 = Color3.fromRGB(255, 255, 255)
+SaveSettings.TextScaled = true
+SaveSettings.TextSize = 14.000
+SaveSettings.TextWrapped = true
+
+UICorner_14.CornerRadius = UDim.new(0, 4)
+UICorner_14.Parent = SaveSettings
+
+UICorner_15.CornerRadius = UDim.new(0, 4)
+UICorner_15.Parent = FovChanger
+
+Esp.Name = "Esp"
+Esp.Parent = VisualsTab
+Esp.AnchorPoint = Vector2.new(0.5, 0.5)
+Esp.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+Esp.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Esp.BorderSizePixel = 0
+Esp.Position = UDim2.new(0.142812014, 0, 0.343298167, 0)
+Esp.Size = UDim2.new(0, 201, 0, 78)
+
+FovChangerName_2.Name = "FovChangerName"
+FovChangerName_2.Parent = Esp
+FovChangerName_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FovChangerName_2.BackgroundTransparency = 1.000
+FovChangerName_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FovChangerName_2.BorderSizePixel = 0
+FovChangerName_2.Size = UDim2.new(0, 64, 0, 22)
+FovChangerName_2.Font = Enum.Font.RobotoMono
+FovChangerName_2.Text = "Esp"
+FovChangerName_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+FovChangerName_2.TextScaled = true
+FovChangerName_2.TextSize = 14.000
+FovChangerName_2.TextWrapped = true
+
+PlayerEsp.Name = "PlayerEsp"
+PlayerEsp.Parent = Esp
+PlayerEsp.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+PlayerEsp.BorderColor3 = Color3.fromRGB(255, 255, 255)
+PlayerEsp.BorderSizePixel = 0
+PlayerEsp.Position = UDim2.new(0.0597014911, 0, 0.333333343, 0)
+PlayerEsp.Size = UDim2.new(0, 74, 0, 25)
+PlayerEsp.Font = Enum.Font.RobotoMono
+PlayerEsp.Text = "PlayerEsp"
+PlayerEsp.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayerEsp.TextScaled = true
+PlayerEsp.TextSize = 14.000
+PlayerEsp.TextWrapped = true
+PlayerEsp.MouseButton1Down:Connect(function()
+	local Players = game:GetService("Players"):GetChildren()
+	local RunService = game:GetService("RunService")
+	local highlight = Instance.new("Highlight")
+	highlight.Name = "Highlight"
+
+	for i, v in pairs(Players) do
+		repeat wait() until v.Character
+		if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+			local highlightClone = highlight:Clone()
+			highlightClone.Adornee = v.Character
+			highlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
+			highlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+			highlightClone.Name = "Highlight"
+		end
+	end
+
+	game.Players.PlayerAdded:Connect(function(player)
+		repeat wait() until player.Character
+		if not player.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+			local highlightClone = highlight:Clone()
+			highlightClone.Adornee = player.Character
+			highlightClone.Parent = player.Character:FindFirstChild("HumanoidRootPart")
+			highlightClone.Name = "Highlight"
+		end
+	end)
+
+	game.Players.PlayerRemoving:Connect(function(playerRemoved)
+		playerRemoved.Character:FindFirstChild("HumanoidRootPart").Highlight:Destroy()
+	end)
+
+	RunService.Heartbeat:Connect(function()
+		for i, v in pairs(Players) do
+			repeat wait() until v.Character
+			if not v.Character:FindFirstChild("HumanoidRootPart"):FindFirstChild("Highlight") then
+				local highlightClone = highlight:Clone()
+				highlightClone.Adornee = v.Character
+				highlightClone.Parent = v.Character:FindFirstChild("HumanoidRootPart")
+				highlightClone.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+				highlightClone.Name = "Highlight"
+				task.wait()
+			end
+		end
+	end)
+end)
+
+UICorner_16.CornerRadius = UDim.new(0, 4)
+UICorner_16.Parent = PlayerEsp
+
+UICorner_17.CornerRadius = UDim.new(0, 4)
+UICorner_17.Parent = Esp
+
+AddonsTab.Name = "AddonsTab"
+AddonsTab.Parent = MainFrame
+AddonsTab.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+AddonsTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+AddonsTab.BorderSizePixel = 0
+AddonsTab.Position = UDim2.new(0.155405402, 0, 0.0950570628, 0)
+AddonsTab.Size = UDim2.new(0, 744, 0, 469)
+AddonsTab.Visible = false
+
+TextLabel_3.Parent = AddonsTab
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Size = UDim2.new(0, 76, 0, 38)
+TextLabel_3.Font = Enum.Font.RobotoMono
+TextLabel_3.Text = "Addons"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 22.000
+
+SeekPlush.Name = "SeekPlush"
+SeekPlush.Parent = AddonsTab
+SeekPlush.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+SeekPlush.BorderColor3 = Color3.fromRGB(255, 255, 255)
+SeekPlush.BorderSizePixel = 0
+SeekPlush.Position = UDim2.new(0.00852679182, 0, 0.0794924349, 0)
+SeekPlush.Size = UDim2.new(0, 129, 0, 27)
+SeekPlush.Font = Enum.Font.RobotoMono
+SeekPlush.Text = "Seek Plush"
+SeekPlush.TextColor3 = Color3.fromRGB(255, 255, 255)
+SeekPlush.TextScaled = true
+SeekPlush.TextSize = 14.000
+SeekPlush.TextWrapped = true
+SeekPlush.MouseButton1Down:Connect(function()
+	local plr = game.Players.LocalPlayer
+	local hum = plr.Character:WaitForChild("Humanoid")
+
+	local plush = game:GetObjects("rbxassetid://13613269677")[1]
+	plush.Parent = plr.Backpack
+	local anim = hum:LoadAnimation(plush.A.Hold)
+
+	plush.Equipped:Connect(function()
+		anim:Play()
+	end)
+	plush.Unequipped:Connect(function()
+		anim:Stop()
+	end)
+
+	plush.Activated:Connect(function()
+		plush.Toy:Play()
+	end)
+end)
+
+UICorner_18.Parent = SeekPlush
+
+CreditsTab.Name = "CreditsTab"
+CreditsTab.Parent = MainFrame
+CreditsTab.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+CreditsTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CreditsTab.BorderSizePixel = 0
+CreditsTab.Position = UDim2.new(0.155405402, 0, 0.0950570628, 0)
+CreditsTab.Size = UDim2.new(0, 744, 0, 469)
+CreditsTab.Visible = false
+
+TextLabel_4.Parent = CreditsTab
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BackgroundTransparency = 1.000
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Size = UDim2.new(0, 76, 0, 38)
+TextLabel_4.Font = Enum.Font.RobotoMono
+TextLabel_4.Text = "Credits"
+TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.TextSize = 22.000
+
+MadeBy.Name = "MadeBy"
+MadeBy.Parent = CreditsTab
+MadeBy.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+MadeBy.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MadeBy.BorderSizePixel = 0
+MadeBy.Position = UDim2.new(0.00806451589, 0, 0.0810234547, 0)
+MadeBy.Size = UDim2.new(0, 738, 0, 50)
+MadeBy.Font = Enum.Font.RobotoMono
+MadeBy.Text = " Made By: Artur_Official"
+MadeBy.TextColor3 = Color3.fromRGB(255, 255, 255)
+MadeBy.TextSize = 18.000
+MadeBy.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_19.CornerRadius = UDim.new(0, 4)
+UICorner_19.Parent = MadeBy
+
+ScriptsTab.Name = "ScriptsTab"
+ScriptsTab.Parent = MainFrame
+ScriptsTab.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+ScriptsTab.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScriptsTab.BorderSizePixel = 0
+ScriptsTab.Position = UDim2.new(0.155405402, 0, 0.0950570628, 0)
+ScriptsTab.Size = UDim2.new(0, 744, 0, 469)
+ScriptsTab.Visible = false
+
+TextLabel_5.Parent = ScriptsTab
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BackgroundTransparency = 1.000
+TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Size = UDim2.new(0, 76, 0, 38)
+TextLabel_5.Font = Enum.Font.RobotoMono
+TextLabel_5.Text = "Scripts"
+TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.TextSize = 22.000
+
+PrisonLifeScript.Name = "PrisonLifeScript"
+PrisonLifeScript.Parent = ScriptsTab
+PrisonLifeScript.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+PrisonLifeScript.BorderColor3 = Color3.fromRGB(255, 255, 255)
+PrisonLifeScript.BorderSizePixel = 0
+PrisonLifeScript.Position = UDim2.new(0.0112149641, 0, 0.150687665, 0)
+PrisonLifeScript.Size = UDim2.new(0, 129, 0, 27)
+PrisonLifeScript.Font = Enum.Font.RobotoMono
+PrisonLifeScript.Text = "PrisonLife Script"
+PrisonLifeScript.TextColor3 = Color3.fromRGB(255, 255, 255)
+PrisonLifeScript.TextScaled = true
+PrisonLifeScript.TextSize = 14.000
+PrisonLifeScript.TextWrapped = true
+SeekPlush.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))()
+end)
+
+UICorner_20.CornerRadius = UDim.new(0, 4)
+UICorner_20.Parent = PrisonLifeScript
+
+MspaintV3.Name = "MspaintV3"
+MspaintV3.Parent = ScriptsTab
+MspaintV3.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+MspaintV3.BorderColor3 = Color3.fromRGB(255, 255, 255)
+MspaintV3.BorderSizePixel = 0
+MspaintV3.Position = UDim2.new(0.0112149641, 0, 0.220893264, 0)
+MspaintV3.Size = UDim2.new(0, 129, 0, 27)
+MspaintV3.Font = Enum.Font.RobotoMono
+MspaintV3.Text = "Mspaint V3"
+MspaintV3.TextColor3 = Color3.fromRGB(255, 255, 255)
+MspaintV3.TextScaled = true
+MspaintV3.TextSize = 14.000
+MspaintV3.TextWrapped = true
+MspaintV3.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/notpoiu/mspaint/main/main.lua"))()
+end)
+
+UICorner_21.CornerRadius = UDim.new(0, 4)
+UICorner_21.Parent = MspaintV3
+
+InfiniteYield.Name = "InfiniteYield"
+InfiniteYield.Parent = ScriptsTab
+InfiniteYield.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+InfiniteYield.BorderColor3 = Color3.fromRGB(255, 255, 255)
+InfiniteYield.BorderSizePixel = 0
+InfiniteYield.Position = UDim2.new(0.0112149641, 0, 0.0800301656, 0)
+InfiniteYield.Size = UDim2.new(0, 129, 0, 27)
+InfiniteYield.Font = Enum.Font.RobotoMono
+InfiniteYield.Text = "Infinite Yield"
+InfiniteYield.TextColor3 = Color3.fromRGB(255, 255, 255)
+InfiniteYield.TextScaled = true
+InfiniteYield.TextSize = 14.000
+InfiniteYield.TextWrapped = true
+InfiniteYield.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end)
+
+UICorner_22.CornerRadius = UDim.new(0, 4)
+UICorner_22.Parent = InfiniteYield
+
+FEDrawScript.Name = "FEDrawScript"
+FEDrawScript.Parent = ScriptsTab
+FEDrawScript.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+FEDrawScript.BorderColor3 = Color3.fromRGB(255, 255, 255)
+FEDrawScript.BorderSizePixel = 0
+FEDrawScript.Position = UDim2.new(0.0112149641, 0, 0.2932311, 0)
+FEDrawScript.Size = UDim2.new(0, 129, 0, 27)
+FEDrawScript.Font = Enum.Font.RobotoMono
+FEDrawScript.Text = "FE Draw Script"
+FEDrawScript.TextColor3 = Color3.fromRGB(255, 255, 255)
+FEDrawScript.TextScaled = true
+FEDrawScript.TextSize = 14.000
+FEDrawScript.TextWrapped = true
+FEDrawScript.MouseButton1Down:Connect(function()
+	loadstring(game:HttpGet('https://pastebin.com/raw/q6WWVCKC'))()
+end)
+
+UICorner_23.CornerRadius = UDim.new(0, 4)
+UICorner_23.Parent = FEDrawScript
+
+OpenFrame.Name = "OpenFrame"
+OpenFrame.Parent = LightX
+OpenFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+OpenFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+OpenFrame.BorderSizePixel = 0
+OpenFrame.Position = UDim2.new(0, 0, 0.472432435, 0)
+OpenFrame.Size = UDim2.new(0, 50, 0, 50)
+OpenFrame.Font = Enum.Font.RobotoMono
+OpenFrame.Text = "LightX"
+OpenFrame.TextColor3 = Color3.fromRGB(255, 255, 255)
+OpenFrame.TextScaled = true
+OpenFrame.TextSize = 14.000
+OpenFrame.TextWrapped = true
+
+UICorner_24.Parent = OpenFrame
+
+-- Scripts:
+
+local function NTGSKWV_fake_script() -- MainTabButton.LocalScript 
+	local script = Instance.new('LocalScript', MainTabButton)
+
+	local mouse = script.Parent
+	local ScriptsTab = script.Parent.Parent.Parent.Parent.MainFrame.ScriptsTab
+	local CreditsTab = script.Parent.Parent.Parent.Parent.MainFrame.CreditsTab
+	local MainTab = script.Parent.Parent.Parent.Parent.MainFrame.MainTab
+	local VisualsTab = script.Parent.Parent.Parent.Parent.MainFrame.VisualsTab
+	local AddonsTab = script.Parent.Parent.Parent.Parent.MainFrame.AddonsTab
+	
+	mouse.MouseButton1Click:Connect(function()
+		ScriptsTab.Visible = false
+		CreditsTab.Visible = false
+		MainTab.Visible = true
+		VisualsTab.Visible = false
+		AddonsTab.Visible = false
+	end)
+end
+coroutine.wrap(NTGSKWV_fake_script)()
+local function ODNQR_fake_script() -- VisualsTabButton.LocalScript 
+	local script = Instance.new('LocalScript', VisualsTabButton)
+
+	local mouse = script.Parent
+	local ScriptsTab = script.Parent.Parent.Parent.Parent.MainFrame.ScriptsTab
+	local CreditsTab = script.Parent.Parent.Parent.Parent.MainFrame.CreditsTab
+	local MainTab = script.Parent.Parent.Parent.Parent.MainFrame.MainTab
+	local VisualsTab = script.Parent.Parent.Parent.Parent.MainFrame.VisualsTab
+	local AddonsTab = script.Parent.Parent.Parent.Parent.MainFrame.AddonsTab
+	
+	mouse.MouseButton1Click:Connect(function()
+		ScriptsTab.Visible = false
+		CreditsTab.Visible = false
+		MainTab.Visible = false
+		VisualsTab.Visible = true
+		AddonsTab.Visible = false
+	end)
+end
+coroutine.wrap(ODNQR_fake_script)()
+local function VWPRJIX_fake_script() -- AddonsTabButton.LocalScript 
+	local script = Instance.new('LocalScript', AddonsTabButton)
+
+	local mouse = script.Parent
+	local ScriptsTab = script.Parent.Parent.Parent.Parent.MainFrame.ScriptsTab
+	local CreditsTab = script.Parent.Parent.Parent.Parent.MainFrame.CreditsTab
+	local MainTab = script.Parent.Parent.Parent.Parent.MainFrame.MainTab
+	local VisualsTab = script.Parent.Parent.Parent.Parent.MainFrame.VisualsTab
+	local AddonsTab = script.Parent.Parent.Parent.Parent.MainFrame.AddonsTab
+	
+	mouse.MouseButton1Click:Connect(function()
+		ScriptsTab.Visible = false
+		CreditsTab.Visible = false
+		MainTab.Visible = false
+		VisualsTab.Visible = false
+		AddonsTab.Visible = true
+	end)
+end
+coroutine.wrap(VWPRJIX_fake_script)()
+local function MOQU_fake_script() -- CreditsTabButton.LocalScript 
+	local script = Instance.new('LocalScript', CreditsTabButton)
+
+	local mouse = script.Parent
+	local ScriptsTab = script.Parent.Parent.Parent.Parent.MainFrame.ScriptsTab
+	local CreditsTab = script.Parent.Parent.Parent.Parent.MainFrame.CreditsTab
+	local MainTab = script.Parent.Parent.Parent.Parent.MainFrame.MainTab
+	local VisualsTab = script.Parent.Parent.Parent.Parent.MainFrame.VisualsTab
+	local AddonsTab = script.Parent.Parent.Parent.Parent.MainFrame.AddonsTab
+	
+	mouse.MouseButton1Click:Connect(function()
+		ScriptsTab.Visible = false
+		CreditsTab.Visible = true
+		MainTab.Visible = false
+		VisualsTab.Visible = false
+		AddonsTab.Visible = false
+	end)
+end
+coroutine.wrap(MOQU_fake_script)()
+local function DFYF_fake_script() -- ScriptsTabButton.LocalScript 
+	local script = Instance.new('LocalScript', ScriptsTabButton)
+
+	local mouse = script.Parent
+	local ScriptsTab = script.Parent.Parent.Parent.Parent.MainFrame.ScriptsTab
+	local CreditsTab = script.Parent.Parent.Parent.Parent.MainFrame.CreditsTab
+	local MainTab = script.Parent.Parent.Parent.Parent.MainFrame.MainTab
+	local VisualsTab = script.Parent.Parent.Parent.Parent.MainFrame.VisualsTab
+	local AddonsTab = script.Parent.Parent.Parent.Parent.MainFrame.AddonsTab
+	
+	mouse.MouseButton1Click:Connect(function()
+		ScriptsTab.Visible = true
+		CreditsTab.Visible = false
+		MainTab.Visible = false
+		VisualsTab.Visible = false
+		AddonsTab.Visible = false
+	end)
+end
+coroutine.wrap(DFYF_fake_script)()
+local function EDWSMU_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.MainFrame.Visible = false
+	end)
+end
+coroutine.wrap(EDWSMU_fake_script)()
+local function PSXO_fake_script() -- EnterNumbers.LocalScript 
+	local script = Instance.new('LocalScript', EnterNumbers)
+
+	wait(2)
+	local plr = game.Players.LocalPlayer
+	local char = plr.Character
+	local hum = char:WaitForChild("Humanoid")
+	
+	local limit = 75
+	
+	script.Parent.Changed:Connect(function()
+		hum.WalkSpeed = script.Parent.Text
+		
+		if hum.WalkSpeed >= limit then
+			script.Parent.Text = "75"
+		end
+	end)
+end
+coroutine.wrap(PSXO_fake_script)()
+local function JUJBE_fake_script() -- SaveSettings.LocalScript 
+	local script = Instance.new('LocalScript', SaveSettings)
+
+	local cam = game.Workspace.Camera
+	local player = game.Players.LocalPlayer
+	local button = script.Parent
+	
+	local userGameSettings = UserSettings():GetService("UserGameSettings")
+	local mouseSensitivitySetting = userGameSettings.MouseSensitivity
+	
+	local function onActivated()
+		cam.FieldOfView = player.PlayerGui.LightX.MainFrame.VisualsTab.FovChanger.EnterNumbers.Text
+		player.PlayerGui.LightX.MainFrame.Visible = false
+	end
+	
+	button.Activated:Connect(onActivated)
+end
+coroutine.wrap(JUJBE_fake_script)()
+local function PZXI_fake_script() -- OpenFrame.LocalScript 
+	local script = Instance.new('LocalScript', OpenFrame)
+
+	script.Parent.Parent.MainFrame.Visible = false
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.MainFrame.Visible = true
+	end)
+end
+coroutine.wrap(PZXI_fake_script)()
