@@ -73,6 +73,14 @@ HomeTab:AddButton({
   	end    
 })
 
+HomeTab:AddButton({
+	Name = "Unload",
+	Callback = function()
+        OrionLib:Destroy()
+  	end    
+})
+
+
 MainTab:AddSlider({
 	Name = "WalkSpeed",
 	Min = 16,
