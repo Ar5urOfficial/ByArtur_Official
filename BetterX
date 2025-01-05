@@ -1,0 +1,1307 @@
+-- ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+-- ─██████████████────██████████████──██████████████──██████████████──██████████████──████████████████────████████──████████─
+-- ─██░░░░░░░░░░██────██░░░░░░░░░░██──██░░░░░░░░░░██──██░░░░░░░░░░██──██░░░░░░░░░░██──██░░░░░░░░░░░░██────██░░░░██──██░░░░██─
+-- ─██░░██████░░██────██░░██████████──██████░░██████──██████░░██████──██░░██████████──██░░████████░░██────████░░██──██░░████─
+-- ─██░░██──██░░██────██░░██──────────────██░░██──────────██░░██──────██░░██──────────██░░██────██░░██──────██░░░░██░░░░██───
+-- ─██░░██████░░████──██░░██████████──────██░░██──────────██░░██──────██░░██████████──██░░████████░░██──────████░░░░░░████───
+-- ─██░░░░░░░░░░░░██──██░░░░░░░░░░██──────██░░██──────────██░░██──────██░░░░░░░░░░██──██░░░░░░░░░░░░██────────██░░░░░░██─────
+-- ─██░░████████░░██──██░░██████████──────██░░██──────────██░░██──────██░░██████████──██░░██████░░████──────████░░░░░░████───
+-- ─██░░██────██░░██──██░░██──────────────██░░██──────────██░░██──────██░░██──────────██░░██──██░░██────────██░░░░██░░░░██───
+-- ─██░░████████░░██──██░░██████████──────██░░██──────────██░░██──────██░░██████████──██░░██──██░░██████──████░░██──██░░████─
+-- ─██░░░░░░░░░░░░██──██░░░░░░░░░░██──────██░░██──────────██░░██──────██░░░░░░░░░░██──██░░██──██░░░░░░██──██░░░░██──██░░░░██─
+-- ─████████████████──██████████████──────██████──────────██████──────██████████████──██████──██████████──████████──████████─
+-- ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+local BetterX = {};
+
+BetterX["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+BetterX["1"]["Name"] = [[BetterX]];
+
+
+BetterX["2"] = Instance.new("Frame", BetterX["1"]);
+BetterX["2"]["BorderSizePixel"] = 0;
+BetterX["2"]["BackgroundColor3"] = Color3.fromRGB(27, 27, 27);
+BetterX["2"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+BetterX["2"]["Size"] = UDim2.new(0, 500, 0, 350);
+BetterX["2"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+BetterX["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["2"]["Name"] = [[Main]];
+
+
+BetterX["3"] = Instance.new("UIStroke", BetterX["2"]);
+BetterX["3"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+BetterX["3"]["Color"] = Color3.fromRGB(65, 65, 65);
+
+
+BetterX["4"] = Instance.new("Frame", BetterX["2"]);
+BetterX["4"]["ZIndex"] = 0;
+BetterX["4"]["BorderSizePixel"] = 0;
+BetterX["4"]["Size"] = UDim2.new(1, 0, 1, 0);
+BetterX["4"]["Name"] = [[Shadows]];
+BetterX["4"]["BackgroundTransparency"] = 1;
+
+
+BetterX["5"] = Instance.new("ImageLabel", BetterX["4"]);
+BetterX["5"]["ZIndex"] = 0;
+BetterX["5"]["BorderSizePixel"] = 0;
+BetterX["5"]["SliceCenter"] = Rect.new(49, 49, 450, 450);
+BetterX["5"]["ScaleType"] = Enum.ScaleType.Slice;
+BetterX["5"]["ImageTransparency"] = 0.5;
+BetterX["5"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["5"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+BetterX["5"]["Image"] = [[rbxassetid://6014261993]];
+BetterX["5"]["Size"] = UDim2.new(1, 47, 1, 47);
+BetterX["5"]["BackgroundTransparency"] = 1;
+BetterX["5"]["Name"] = [[Shadow1]];
+BetterX["5"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.BetterX.Main.TopBar
+BetterX["6"] = Instance.new("Frame", BetterX["2"]);
+BetterX["6"]["BorderSizePixel"] = 0;
+BetterX["6"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+BetterX["6"]["Size"] = UDim2.new(0, 500, 0, 41);
+BetterX["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["6"]["Name"] = [[TopBar]];
+
+
+-- StarterGui.BetterX.Main.TopBar.UIStroke
+BetterX["7"] = Instance.new("UIStroke", BetterX["6"]);
+BetterX["7"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+BetterX["7"]["Color"] = Color3.fromRGB(65, 65, 65);
+
+
+-- StarterGui.BetterX.Main.TopBar.UICorner
+BetterX["8"] = Instance.new("UICorner", BetterX["6"]);
+BetterX["8"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.BetterX.Main.TopBar.Title
+BetterX["9"] = Instance.new("TextLabel", BetterX["6"]);
+BetterX["9"]["BorderSizePixel"] = 0;
+BetterX["9"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+BetterX["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["9"]["TextSize"] = 18;
+BetterX["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+BetterX["9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["9"]["BackgroundTransparency"] = 1;
+BetterX["9"]["Size"] = UDim2.new(0, 184, 0, 41);
+BetterX["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["9"]["Text"] = [[BetterX]];
+BetterX["9"]["Name"] = [[Title]];
+
+
+-- StarterGui.BetterX.Main.TopBar.Title.UIPadding
+BetterX["a"] = Instance.new("UIPadding", BetterX["9"]);
+BetterX["a"]["PaddingLeft"] = UDim.new(0, 8);
+
+
+-- StarterGui.BetterX.Main.TopBar.Close
+BetterX["b"] = Instance.new("ImageButton", BetterX["6"]);
+BetterX["b"]["BorderSizePixel"] = 0;
+BetterX["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["b"]["Image"] = [[rbxassetid://10747384394]];
+BetterX["b"]["Size"] = UDim2.new(0, 22, 0, 22);
+BetterX["b"]["BackgroundTransparency"] = 1;
+BetterX["b"]["Name"] = [[Close]];
+BetterX["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["b"]["Position"] = UDim2.new(0.942, 0, 0.21951, 0);
+
+
+-- StarterGui.BetterX.Main.TopBar.Close.LocalScript
+BetterX["c"] = Instance.new("LocalScript", BetterX["b"]);
+
+
+
+-- StarterGui.BetterX.Main.Navigation
+BetterX["d"] = Instance.new("Frame", BetterX["2"]);
+BetterX["d"]["BorderSizePixel"] = 0;
+BetterX["d"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+BetterX["d"]["Size"] = UDim2.new(0, 100, 0, 308);
+BetterX["d"]["Position"] = UDim2.new(0, 0, 0.12, 0);
+BetterX["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["d"]["Name"] = [[Navigation]];
+
+
+-- StarterGui.BetterX.Main.Navigation.UIStroke
+BetterX["e"] = Instance.new("UIStroke", BetterX["d"]);
+BetterX["e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+BetterX["e"]["Color"] = Color3.fromRGB(65, 65, 65);
+
+
+-- StarterGui.BetterX.Main.Navigation.UICorner
+BetterX["f"] = Instance.new("UICorner", BetterX["d"]);
+BetterX["f"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.BetterX.Main.Navigation.HomeButton
+BetterX["10"] = Instance.new("TextButton", BetterX["d"]);
+BetterX["10"]["BorderSizePixel"] = 0;
+BetterX["10"]["TextSize"] = 14;
+BetterX["10"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["10"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+BetterX["10"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+BetterX["10"]["Size"] = UDim2.new(0, 100, 0, 28);
+BetterX["10"]["Name"] = [[HomeButton]];
+BetterX["10"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["10"]["Text"] = [[Home]];
+
+
+-- StarterGui.BetterX.Main.Navigation.HomeButton.UIStroke
+BetterX["11"] = Instance.new("UIStroke", BetterX["10"]);
+BetterX["11"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+BetterX["11"]["Color"] = Color3.fromRGB(65, 65, 65);
+
+
+-- StarterGui.BetterX.Main.Navigation.HomeButton.UICorner
+BetterX["12"] = Instance.new("UICorner", BetterX["10"]);
+BetterX["12"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.BetterX.Main.Navigation.HomeButton.Icon
+BetterX["13"] = Instance.new("ImageLabel", BetterX["10"]);
+BetterX["13"]["BorderSizePixel"] = 0;
+BetterX["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["13"]["Image"] = [[rbxassetid://10723407389]];
+BetterX["13"]["Size"] = UDim2.new(0, 20, 0, 20);
+BetterX["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["13"]["BackgroundTransparency"] = 1;
+BetterX["13"]["Name"] = [[Icon]];
+BetterX["13"]["Position"] = UDim2.new(0.07, 0, 0.14286, 0);
+
+
+-- StarterGui.BetterX.Main.Navigation.HomeButton.LocalScript
+BetterX["14"] = Instance.new("LocalScript", BetterX["10"]);
+
+
+
+-- StarterGui.BetterX.Main.Navigation.UIPadding
+BetterX["15"] = Instance.new("UIPadding", BetterX["d"]);
+BetterX["15"]["PaddingTop"] = UDim.new(0, 4);
+
+
+-- StarterGui.BetterX.Main.Navigation.UIListLayout
+BetterX["16"] = Instance.new("UIListLayout", BetterX["d"]);
+BetterX["16"]["Padding"] = UDim.new(0, 4);
+BetterX["16"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.BetterX.Main.Navigation.MainButton
+BetterX["17"] = Instance.new("TextButton", BetterX["d"]);
+BetterX["17"]["BorderSizePixel"] = 0;
+BetterX["17"]["TextSize"] = 14;
+BetterX["17"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["17"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+BetterX["17"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+BetterX["17"]["Size"] = UDim2.new(0, 100, 0, 28);
+BetterX["17"]["Name"] = [[MainButton]];
+BetterX["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["17"]["Text"] = [[Main]];
+
+
+-- StarterGui.BetterX.Main.Navigation.MainButton.UIStroke
+BetterX["18"] = Instance.new("UIStroke", BetterX["17"]);
+BetterX["18"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+BetterX["18"]["Color"] = Color3.fromRGB(65, 65, 65);
+
+
+-- StarterGui.BetterX.Main.Navigation.MainButton.UICorner
+BetterX["19"] = Instance.new("UICorner", BetterX["17"]);
+BetterX["19"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.BetterX.Main.Navigation.MainButton.Icon
+BetterX["1a"] = Instance.new("ImageLabel", BetterX["17"]);
+BetterX["1a"]["BorderSizePixel"] = 0;
+BetterX["1a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["1a"]["Image"] = [[rbxassetid://10709807111]];
+BetterX["1a"]["Size"] = UDim2.new(0, 20, 0, 20);
+BetterX["1a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["1a"]["BackgroundTransparency"] = 1;
+BetterX["1a"]["Name"] = [[Icon]];
+BetterX["1a"]["Position"] = UDim2.new(0.07, 0, 0.143, 0);
+
+
+-- StarterGui.BetterX.Main.Navigation.MainButton.LocalScript
+BetterX["1b"] = Instance.new("LocalScript", BetterX["17"]);
+
+
+
+-- StarterGui.BetterX.Main.Navigation.VisualsButton
+BetterX["1c"] = Instance.new("TextButton", BetterX["d"]);
+BetterX["1c"]["BorderSizePixel"] = 0;
+BetterX["1c"]["TextSize"] = 14;
+BetterX["1c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["1c"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+BetterX["1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+BetterX["1c"]["Size"] = UDim2.new(0, 100, 0, 28);
+BetterX["1c"]["Name"] = [[VisualsButton]];
+BetterX["1c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["1c"]["Text"] = [[Visuals]];
+
+
+-- StarterGui.BetterX.Main.Navigation.VisualsButton.UIStroke
+BetterX["1d"] = Instance.new("UIStroke", BetterX["1c"]);
+BetterX["1d"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+BetterX["1d"]["Color"] = Color3.fromRGB(65, 65, 65);
+
+
+-- StarterGui.BetterX.Main.Navigation.VisualsButton.UICorner
+BetterX["1e"] = Instance.new("UICorner", BetterX["1c"]);
+BetterX["1e"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.BetterX.Main.Navigation.VisualsButton.Icon
+BetterX["1f"] = Instance.new("ImageLabel", BetterX["1c"]);
+BetterX["1f"]["BorderSizePixel"] = 0;
+BetterX["1f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["1f"]["Image"] = [[rbxassetid://10709782497]];
+BetterX["1f"]["Size"] = UDim2.new(0, 20, 0, 20);
+BetterX["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["1f"]["BackgroundTransparency"] = 1;
+BetterX["1f"]["Name"] = [[Icon]];
+BetterX["1f"]["Position"] = UDim2.new(0.04, 0, 0.143, 0);
+
+
+-- StarterGui.BetterX.Main.Navigation.VisualsButton.LocalScript
+BetterX["20"] = Instance.new("LocalScript", BetterX["1c"]);
+
+
+
+-- StarterGui.BetterX.Main.Navigation.CreditsButton
+BetterX["21"] = Instance.new("TextButton", BetterX["d"]);
+BetterX["21"]["BorderSizePixel"] = 0;
+BetterX["21"]["TextSize"] = 14;
+BetterX["21"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["21"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+BetterX["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+BetterX["21"]["Size"] = UDim2.new(0, 100, 0, 28);
+BetterX["21"]["Name"] = [[CreditsButton]];
+BetterX["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["21"]["Text"] = [[Credits]];
+
+
+-- StarterGui.BetterX.Main.Navigation.CreditsButton.UIStroke
+BetterX["22"] = Instance.new("UIStroke", BetterX["21"]);
+BetterX["22"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+BetterX["22"]["Color"] = Color3.fromRGB(65, 65, 65);
+
+
+-- StarterGui.BetterX.Main.Navigation.CreditsButton.UICorner
+BetterX["23"] = Instance.new("UICorner", BetterX["21"]);
+BetterX["23"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.BetterX.Main.Navigation.CreditsButton.Icon
+BetterX["24"] = Instance.new("ImageLabel", BetterX["21"]);
+BetterX["24"]["BorderSizePixel"] = 0;
+BetterX["24"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["24"]["Image"] = [[rbxassetid://10709797508]];
+BetterX["24"]["Size"] = UDim2.new(0, 20, 0, 20);
+BetterX["24"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["24"]["BackgroundTransparency"] = 1;
+BetterX["24"]["Name"] = [[Icon]];
+BetterX["24"]["Position"] = UDim2.new(0.04, 0, 0.143, 0);
+
+
+-- StarterGui.BetterX.Main.Navigation.CreditsButton.LocalScript
+BetterX["25"] = Instance.new("LocalScript", BetterX["21"]);
+
+
+
+-- StarterGui.BetterX.Main.Navigation.SettingsButton
+BetterX["26"] = Instance.new("TextButton", BetterX["d"]);
+BetterX["26"]["BorderSizePixel"] = 0;
+BetterX["26"]["TextSize"] = 14;
+BetterX["26"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["26"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+BetterX["26"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+BetterX["26"]["Size"] = UDim2.new(0, 100, 0, 28);
+BetterX["26"]["Name"] = [[SettingsButton]];
+BetterX["26"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["26"]["Text"] = [[Settings]];
+
+
+-- StarterGui.BetterX.Main.Navigation.SettingsButton.UIStroke
+BetterX["27"] = Instance.new("UIStroke", BetterX["26"]);
+BetterX["27"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+BetterX["27"]["Color"] = Color3.fromRGB(65, 65, 65);
+
+
+-- StarterGui.BetterX.Main.Navigation.SettingsButton.UICorner
+BetterX["28"] = Instance.new("UICorner", BetterX["26"]);
+BetterX["28"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.BetterX.Main.Navigation.SettingsButton.Icon
+BetterX["29"] = Instance.new("ImageLabel", BetterX["26"]);
+BetterX["29"]["BorderSizePixel"] = 0;
+BetterX["29"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["29"]["Image"] = [[rbxassetid://10734950309]];
+BetterX["29"]["Size"] = UDim2.new(0, 20, 0, 20);
+BetterX["29"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["29"]["BackgroundTransparency"] = 1;
+BetterX["29"]["Name"] = [[Icon]];
+BetterX["29"]["Position"] = UDim2.new(0.02, 0, 0.143, 0);
+
+
+-- StarterGui.BetterX.Main.Navigation.SettingsButton.LocalScript
+BetterX["2a"] = Instance.new("LocalScript", BetterX["26"]);
+
+
+
+-- StarterGui.BetterX.Main.Tabs
+BetterX["2b"] = Instance.new("Frame", BetterX["2"]);
+BetterX["2b"]["BorderSizePixel"] = 0;
+BetterX["2b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["2b"]["Size"] = UDim2.new(0, 393, 0, 301);
+BetterX["2b"]["Position"] = UDim2.new(0.2, 0, 0.12, 0);
+BetterX["2b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["2b"]["Name"] = [[Tabs]];
+BetterX["2b"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab
+BetterX["2c"] = Instance.new("Frame", BetterX["2b"]);
+BetterX["2c"]["BorderSizePixel"] = 0;
+BetterX["2c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["2c"]["Size"] = UDim2.new(0, 386, 0, 293);
+BetterX["2c"]["Position"] = UDim2.new(0.01781, 0, 0.02658, 0);
+BetterX["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["2c"]["Name"] = [[HomeTab]];
+BetterX["2c"]["BackgroundTransparency"] = 1;
+BetterX["2c"]["SelectionGroup"] = true;
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.UIListLayout
+BetterX["2d"] = Instance.new("UIListLayout", BetterX["2c"]);
+BetterX["2d"]["Padding"] = UDim.new(0, 6);
+BetterX["2d"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.UIPadding
+BetterX["2e"] = Instance.new("UIPadding", BetterX["2c"]);
+BetterX["2e"]["PaddingTop"] = UDim.new(0, 1);
+BetterX["2e"]["PaddingRight"] = UDim.new(0, 1);
+BetterX["2e"]["PaddingLeft"] = UDim.new(0, 1);
+BetterX["2e"]["PaddingBottom"] = UDim.new(0, 1);
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Label
+BetterX["2f"] = Instance.new("Frame", BetterX["2c"]);
+BetterX["2f"]["BorderSizePixel"] = 0;
+BetterX["2f"]["BackgroundColor3"] = Color3.fromRGB(27, 27, 27);
+BetterX["2f"]["Size"] = UDim2.new(0, 385, 0, 42);
+BetterX["2f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["2f"]["Name"] = [[Label]];
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Label.UICorner
+BetterX["30"] = Instance.new("UICorner", BetterX["2f"]);
+BetterX["30"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Label.Title
+BetterX["31"] = Instance.new("TextLabel", BetterX["2f"]);
+BetterX["31"]["BorderSizePixel"] = 0;
+BetterX["31"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+BetterX["31"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["31"]["TextSize"] = 14;
+BetterX["31"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+BetterX["31"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["31"]["BackgroundTransparency"] = 1;
+BetterX["31"]["Size"] = UDim2.new(0, 330, 0, 42);
+BetterX["31"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["31"]["Text"] = [[Welcome To BetterX!]];
+BetterX["31"]["Name"] = [[Title]];
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Label.Title.UIPadding
+BetterX["32"] = Instance.new("UIPadding", BetterX["31"]);
+BetterX["32"]["PaddingLeft"] = UDim.new(0, 8);
+BetterX["32"]["PaddingBottom"] = UDim.new(0, 1);
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Label.ImageLabel
+BetterX["33"] = Instance.new("ImageLabel", BetterX["2f"]);
+BetterX["33"]["BorderSizePixel"] = 0;
+BetterX["33"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["33"]["Image"] = [[rbxassetid://10723367380]];
+BetterX["33"]["Size"] = UDim2.new(0, 22, 0, 22);
+BetterX["33"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["33"]["BackgroundTransparency"] = 1;
+BetterX["33"]["Position"] = UDim2.new(0.92208, 0, 0.2381, 0);
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Label.UIStroke
+BetterX["34"] = Instance.new("UIStroke", BetterX["2f"]);
+BetterX["34"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+BetterX["34"]["Color"] = Color3.fromRGB(65, 65, 65);
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button
+BetterX["35"] = Instance.new("Frame", BetterX["2c"]);
+BetterX["35"]["BorderSizePixel"] = 0;
+BetterX["35"]["BackgroundColor3"] = Color3.fromRGB(27, 27, 27);
+BetterX["35"]["Size"] = UDim2.new(0, 385, 0, 42);
+BetterX["35"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["35"]["Name"] = [[Button]];
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.UICorner
+BetterX["36"] = Instance.new("UICorner", BetterX["35"]);
+BetterX["36"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.UIStroke
+BetterX["37"] = Instance.new("UIStroke", BetterX["35"]);
+BetterX["37"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+BetterX["37"]["Color"] = Color3.fromRGB(65, 65, 65);
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.Title
+BetterX["38"] = Instance.new("TextLabel", BetterX["35"]);
+BetterX["38"]["BorderSizePixel"] = 0;
+BetterX["38"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+BetterX["38"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["38"]["TextSize"] = 14;
+BetterX["38"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+BetterX["38"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["38"]["BackgroundTransparency"] = 1;
+BetterX["38"]["Size"] = UDim2.new(0, 330, 0, 42);
+BetterX["38"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["38"]["Text"] = [[Infinite Yield]];
+BetterX["38"]["Name"] = [[Title]];
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.Title.UIPadding
+BetterX["39"] = Instance.new("UIPadding", BetterX["38"]);
+BetterX["39"]["PaddingLeft"] = UDim.new(0, 8);
+BetterX["39"]["PaddingBottom"] = UDim.new(0, 1);
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.InfYield
+BetterX["3a"] = Instance.new("ImageButton", BetterX["35"]);
+BetterX["3a"]["Active"] = false;
+BetterX["3a"]["BorderSizePixel"] = 0;
+BetterX["3a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["3a"]["Selectable"] = false;
+BetterX["3a"]["Image"] = [[rbxassetid://10734898355]];
+BetterX["3a"]["Size"] = UDim2.new(0, 22, 0, 22);
+BetterX["3a"]["BackgroundTransparency"] = 1;
+BetterX["3a"]["Name"] = [[InfYield]];
+BetterX["3a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["3a"]["Position"] = UDim2.new(0.92208, 0, 0.2381, 0);
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.InfYield.LocalScript
+BetterX["3b"] = Instance.new("LocalScript", BetterX["3a"]);
+
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button
+BetterX["3c"] = Instance.new("Frame", BetterX["2c"]);
+BetterX["3c"]["BorderSizePixel"] = 0;
+BetterX["3c"]["BackgroundColor3"] = Color3.fromRGB(27, 27, 27);
+BetterX["3c"]["Size"] = UDim2.new(0, 385, 0, 42);
+BetterX["3c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["3c"]["Name"] = [[Button]];
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.UICorner
+BetterX["3d"] = Instance.new("UICorner", BetterX["3c"]);
+BetterX["3d"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.UIStroke
+BetterX["3e"] = Instance.new("UIStroke", BetterX["3c"]);
+BetterX["3e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+BetterX["3e"]["Color"] = Color3.fromRGB(65, 65, 65);
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.Title
+BetterX["3f"] = Instance.new("TextLabel", BetterX["3c"]);
+BetterX["3f"]["BorderSizePixel"] = 0;
+BetterX["3f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+BetterX["3f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["3f"]["TextSize"] = 14;
+BetterX["3f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+BetterX["3f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["3f"]["BackgroundTransparency"] = 1;
+BetterX["3f"]["Size"] = UDim2.new(0, 330, 0, 42);
+BetterX["3f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["3f"]["Text"] = [[FE Chat Draw]];
+BetterX["3f"]["Name"] = [[Title]];
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.Title.UIPadding
+BetterX["40"] = Instance.new("UIPadding", BetterX["3f"]);
+BetterX["40"]["PaddingLeft"] = UDim.new(0, 8);
+BetterX["40"]["PaddingBottom"] = UDim.new(0, 1);
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.FEChatDraw
+BetterX["41"] = Instance.new("ImageButton", BetterX["3c"]);
+BetterX["41"]["Active"] = false;
+BetterX["41"]["BorderSizePixel"] = 0;
+BetterX["41"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["41"]["Selectable"] = false;
+BetterX["41"]["Image"] = [[rbxassetid://10734898355]];
+BetterX["41"]["Size"] = UDim2.new(0, 22, 0, 22);
+BetterX["41"]["BackgroundTransparency"] = 1;
+BetterX["41"]["Name"] = [[FEChatDraw]];
+BetterX["41"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["41"]["Position"] = UDim2.new(0.92208, 0, 0.2381, 0);
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.FEChatDraw.LocalScript
+BetterX["42"] = Instance.new("LocalScript", BetterX["41"]);
+
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button
+BetterX["43"] = Instance.new("Frame", BetterX["2c"]);
+BetterX["43"]["BorderSizePixel"] = 0;
+BetterX["43"]["BackgroundColor3"] = Color3.fromRGB(27, 27, 27);
+BetterX["43"]["Size"] = UDim2.new(0, 385, 0, 42);
+BetterX["43"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["43"]["Name"] = [[Button]];
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.UICorner
+BetterX["44"] = Instance.new("UICorner", BetterX["43"]);
+BetterX["44"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.UIStroke
+BetterX["45"] = Instance.new("UIStroke", BetterX["43"]);
+BetterX["45"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+BetterX["45"]["Color"] = Color3.fromRGB(65, 65, 65);
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.Title
+BetterX["46"] = Instance.new("TextLabel", BetterX["43"]);
+BetterX["46"]["BorderSizePixel"] = 0;
+BetterX["46"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+BetterX["46"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["46"]["TextSize"] = 14;
+BetterX["46"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+BetterX["46"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["46"]["BackgroundTransparency"] = 1;
+BetterX["46"]["Size"] = UDim2.new(0, 330, 0, 42);
+BetterX["46"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["46"]["Text"] = [[UNC Test]];
+BetterX["46"]["Name"] = [[Title]];
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.Title.UIPadding
+BetterX["47"] = Instance.new("UIPadding", BetterX["46"]);
+BetterX["47"]["PaddingLeft"] = UDim.new(0, 8);
+BetterX["47"]["PaddingBottom"] = UDim.new(0, 1);
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.UNCTEST
+BetterX["48"] = Instance.new("ImageButton", BetterX["43"]);
+BetterX["48"]["Active"] = false;
+BetterX["48"]["BorderSizePixel"] = 0;
+BetterX["48"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["48"]["Selectable"] = false;
+BetterX["48"]["Image"] = [[rbxassetid://10734898355]];
+BetterX["48"]["Size"] = UDim2.new(0, 22, 0, 22);
+BetterX["48"]["BackgroundTransparency"] = 1;
+BetterX["48"]["Name"] = [[UNCTEST]];
+BetterX["48"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["48"]["Position"] = UDim2.new(0.92208, 0, 0.2381, 0);
+
+
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.UNCTEST.LocalScript
+BetterX["49"] = Instance.new("LocalScript", BetterX["48"]);
+
+
+
+-- StarterGui.BetterX.Main.Tabs.MainTab
+BetterX["4a"] = Instance.new("Frame", BetterX["2b"]);
+BetterX["4a"]["Visible"] = false;
+BetterX["4a"]["BorderSizePixel"] = 0;
+BetterX["4a"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["4a"]["Size"] = UDim2.new(0, 386, 0, 293);
+BetterX["4a"]["Position"] = UDim2.new(0.01781, 0, 0.02658, 0);
+BetterX["4a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["4a"]["Name"] = [[MainTab]];
+BetterX["4a"]["BackgroundTransparency"] = 1;
+BetterX["4a"]["SelectionGroup"] = true;
+
+
+-- StarterGui.BetterX.Main.Tabs.MainTab.UIListLayout
+BetterX["4b"] = Instance.new("UIListLayout", BetterX["4a"]);
+BetterX["4b"]["Padding"] = UDim.new(0, 6);
+BetterX["4b"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.BetterX.Main.Tabs.MainTab.UIPadding
+BetterX["4c"] = Instance.new("UIPadding", BetterX["4a"]);
+BetterX["4c"]["PaddingTop"] = UDim.new(0, 1);
+BetterX["4c"]["PaddingRight"] = UDim.new(0, 1);
+BetterX["4c"]["PaddingLeft"] = UDim.new(0, 1);
+BetterX["4c"]["PaddingBottom"] = UDim.new(0, 1);
+
+
+-- StarterGui.BetterX.Main.Tabs.MainTab.TextBox
+BetterX["4d"] = Instance.new("Frame", BetterX["4a"]);
+BetterX["4d"]["BorderSizePixel"] = 0;
+BetterX["4d"]["BackgroundColor3"] = Color3.fromRGB(27, 27, 27);
+BetterX["4d"]["Size"] = UDim2.new(0, 385, 0, 51);
+BetterX["4d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["4d"]["Name"] = [[TextBox]];
+
+
+-- StarterGui.BetterX.Main.Tabs.MainTab.TextBox.UICorner
+BetterX["4e"] = Instance.new("UICorner", BetterX["4d"]);
+BetterX["4e"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.BetterX.Main.Tabs.MainTab.TextBox.UIStroke
+BetterX["4f"] = Instance.new("UIStroke", BetterX["4d"]);
+BetterX["4f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+BetterX["4f"]["Color"] = Color3.fromRGB(65, 65, 65);
+
+
+-- StarterGui.BetterX.Main.Tabs.MainTab.TextBox.Title
+BetterX["50"] = Instance.new("TextLabel", BetterX["4d"]);
+BetterX["50"]["BorderSizePixel"] = 0;
+BetterX["50"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+BetterX["50"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["50"]["TextSize"] = 14;
+BetterX["50"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+BetterX["50"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["50"]["BackgroundTransparency"] = 1;
+BetterX["50"]["Size"] = UDim2.new(0, 84, 0, 42);
+BetterX["50"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["50"]["Text"] = [[WalkSpeed]];
+BetterX["50"]["Name"] = [[Title]];
+BetterX["50"]["Position"] = UDim2.new(0, 0, 0.07843, 0);
+
+
+-- StarterGui.BetterX.Main.Tabs.MainTab.TextBox.Title.UIPadding
+BetterX["51"] = Instance.new("UIPadding", BetterX["50"]);
+BetterX["51"]["PaddingLeft"] = UDim.new(0, 8);
+BetterX["51"]["PaddingBottom"] = UDim.new(0, 1);
+
+
+-- StarterGui.BetterX.Main.Tabs.MainTab.TextBox.ImageLabel
+BetterX["52"] = Instance.new("ImageLabel", BetterX["4d"]);
+BetterX["52"]["BorderSizePixel"] = 0;
+BetterX["52"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["52"]["Image"] = [[rbxassetid://10734982297]];
+BetterX["52"]["Size"] = UDim2.new(0, 22, 0, 22);
+BetterX["52"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["52"]["BackgroundTransparency"] = 1;
+BetterX["52"]["Position"] = UDim2.new(0.92468, 0, 0.27731, 0);
+
+
+-- StarterGui.BetterX.Main.Tabs.MainTab.TextBox.EnterNumbers
+BetterX["53"] = Instance.new("TextBox", BetterX["4d"]);
+BetterX["53"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["53"]["BorderSizePixel"] = 0;
+BetterX["53"]["TextSize"] = 14;
+BetterX["53"]["Name"] = [[EnterNumbers]];
+BetterX["53"]["BackgroundColor3"] = Color3.fromRGB(27, 27, 27);
+BetterX["53"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+BetterX["53"]["PlaceholderText"] = [[0-500]];
+BetterX["53"]["Size"] = UDim2.new(0, 136, 0, 25);
+BetterX["53"]["Position"] = UDim2.new(0.23636, 0, 0.21569, 0);
+BetterX["53"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["53"]["Text"] = [[]];
+
+
+-- StarterGui.BetterX.Main.Tabs.MainTab.TextBox.EnterNumbers.UIStroke
+BetterX["54"] = Instance.new("UIStroke", BetterX["53"]);
+BetterX["54"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+BetterX["54"]["Color"] = Color3.fromRGB(65, 65, 65);
+
+
+-- StarterGui.BetterX.Main.Tabs.MainTab.TextBox.EnterNumbers.UICorner
+BetterX["55"] = Instance.new("UICorner", BetterX["53"]);
+BetterX["55"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.BetterX.Main.Tabs.MainTab.TextBox.EnterNumbers.LocalScript
+BetterX["56"] = Instance.new("LocalScript", BetterX["53"]);
+
+
+
+-- StarterGui.BetterX.Main.Tabs.VisualsTab
+BetterX["57"] = Instance.new("Frame", BetterX["2b"]);
+BetterX["57"]["Visible"] = false;
+BetterX["57"]["BorderSizePixel"] = 0;
+BetterX["57"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["57"]["Size"] = UDim2.new(0, 386, 0, 293);
+BetterX["57"]["Position"] = UDim2.new(0.01781, 0, 0.02658, 0);
+BetterX["57"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["57"]["Name"] = [[VisualsTab]];
+BetterX["57"]["BackgroundTransparency"] = 1;
+BetterX["57"]["SelectionGroup"] = true;
+
+
+-- StarterGui.BetterX.Main.Tabs.VisualsTab.UIListLayout
+BetterX["58"] = Instance.new("UIListLayout", BetterX["57"]);
+BetterX["58"]["Padding"] = UDim.new(0, 6);
+BetterX["58"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.BetterX.Main.Tabs.VisualsTab.UIPadding
+BetterX["59"] = Instance.new("UIPadding", BetterX["57"]);
+BetterX["59"]["PaddingTop"] = UDim.new(0, 1);
+BetterX["59"]["PaddingRight"] = UDim.new(0, 1);
+BetterX["59"]["PaddingLeft"] = UDim.new(0, 1);
+BetterX["59"]["PaddingBottom"] = UDim.new(0, 1);
+
+
+-- StarterGui.BetterX.Main.Tabs.VisualsTab.Button
+BetterX["5a"] = Instance.new("Frame", BetterX["57"]);
+BetterX["5a"]["BorderSizePixel"] = 0;
+BetterX["5a"]["BackgroundColor3"] = Color3.fromRGB(27, 27, 27);
+BetterX["5a"]["Size"] = UDim2.new(0, 385, 0, 42);
+BetterX["5a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["5a"]["Name"] = [[Button]];
+
+
+-- StarterGui.BetterX.Main.Tabs.VisualsTab.Button.UICorner
+BetterX["5b"] = Instance.new("UICorner", BetterX["5a"]);
+BetterX["5b"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.BetterX.Main.Tabs.VisualsTab.Button.UIStroke
+BetterX["5c"] = Instance.new("UIStroke", BetterX["5a"]);
+BetterX["5c"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+BetterX["5c"]["Color"] = Color3.fromRGB(65, 65, 65);
+
+
+-- StarterGui.BetterX.Main.Tabs.VisualsTab.Button.Title
+BetterX["5d"] = Instance.new("TextLabel", BetterX["5a"]);
+BetterX["5d"]["BorderSizePixel"] = 0;
+BetterX["5d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+BetterX["5d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["5d"]["TextSize"] = 14;
+BetterX["5d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+BetterX["5d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["5d"]["BackgroundTransparency"] = 1;
+BetterX["5d"]["Size"] = UDim2.new(0, 330, 0, 42);
+BetterX["5d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["5d"]["Text"] = [[Player Esp]];
+BetterX["5d"]["Name"] = [[Title]];
+
+
+-- StarterGui.BetterX.Main.Tabs.VisualsTab.Button.Title.UIPadding
+BetterX["5e"] = Instance.new("UIPadding", BetterX["5d"]);
+BetterX["5e"]["PaddingLeft"] = UDim.new(0, 8);
+BetterX["5e"]["PaddingBottom"] = UDim.new(0, 1);
+
+
+-- StarterGui.BetterX.Main.Tabs.VisualsTab.Button.PlayerESP
+BetterX["5f"] = Instance.new("ImageButton", BetterX["5a"]);
+BetterX["5f"]["Active"] = false;
+BetterX["5f"]["BorderSizePixel"] = 0;
+BetterX["5f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["5f"]["Selectable"] = false;
+BetterX["5f"]["Image"] = [[rbxassetid://10734898355]];
+BetterX["5f"]["Size"] = UDim2.new(0, 22, 0, 22);
+BetterX["5f"]["BackgroundTransparency"] = 1;
+BetterX["5f"]["Name"] = [[PlayerESP]];
+BetterX["5f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["5f"]["Position"] = UDim2.new(0.92208, 0, 0.2381, 0);
+
+
+-- StarterGui.BetterX.Main.Tabs.VisualsTab.Button.PlayerESP.LocalScript
+BetterX["60"] = Instance.new("LocalScript", BetterX["5f"]);
+
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab
+BetterX["61"] = Instance.new("Frame", BetterX["2b"]);
+BetterX["61"]["Visible"] = false;
+BetterX["61"]["BorderSizePixel"] = 0;
+BetterX["61"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["61"]["Size"] = UDim2.new(0, 386, 0, 293);
+BetterX["61"]["Position"] = UDim2.new(0.01781, 0, 0.02658, 0);
+BetterX["61"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["61"]["Name"] = [[CreditsTab]];
+BetterX["61"]["BackgroundTransparency"] = 1;
+BetterX["61"]["SelectionGroup"] = true;
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.UIListLayout
+BetterX["62"] = Instance.new("UIListLayout", BetterX["61"]);
+BetterX["62"]["Padding"] = UDim.new(0, 6);
+BetterX["62"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.UIPadding
+BetterX["63"] = Instance.new("UIPadding", BetterX["61"]);
+BetterX["63"]["PaddingTop"] = UDim.new(0, 1);
+BetterX["63"]["PaddingRight"] = UDim.new(0, 1);
+BetterX["63"]["PaddingLeft"] = UDim.new(0, 1);
+BetterX["63"]["PaddingBottom"] = UDim.new(0, 1);
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.Info
+BetterX["64"] = Instance.new("Frame", BetterX["61"]);
+BetterX["64"]["BorderSizePixel"] = 0;
+BetterX["64"]["BackgroundColor3"] = Color3.fromRGB(37, 44, 53);
+BetterX["64"]["Size"] = UDim2.new(0, 385, 0, 42);
+BetterX["64"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["64"]["Name"] = [[Info]];
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.Info.UICorner
+BetterX["65"] = Instance.new("UICorner", BetterX["64"]);
+BetterX["65"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.Info.Title
+BetterX["66"] = Instance.new("TextLabel", BetterX["64"]);
+BetterX["66"]["BorderSizePixel"] = 0;
+BetterX["66"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+BetterX["66"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["66"]["TextSize"] = 14;
+BetterX["66"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+BetterX["66"]["TextColor3"] = Color3.fromRGB(59, 71, 85);
+BetterX["66"]["BackgroundTransparency"] = 1;
+BetterX["66"]["Size"] = UDim2.new(0, 330, 0, 42);
+BetterX["66"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["66"]["Text"] = [[UI Artur_Official]];
+BetterX["66"]["Name"] = [[Title]];
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.Info.Title.UIPadding
+BetterX["67"] = Instance.new("UIPadding", BetterX["66"]);
+BetterX["67"]["PaddingLeft"] = UDim.new(0, 8);
+BetterX["67"]["PaddingBottom"] = UDim.new(0, 1);
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.Info.ImageLabel
+BetterX["68"] = Instance.new("ImageLabel", BetterX["64"]);
+BetterX["68"]["BorderSizePixel"] = 0;
+BetterX["68"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["68"]["ImageColor3"] = Color3.fromRGB(59, 71, 85);
+BetterX["68"]["Image"] = [[rbxassetid://10723415903]];
+BetterX["68"]["Size"] = UDim2.new(0, 22, 0, 22);
+BetterX["68"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["68"]["BackgroundTransparency"] = 1;
+BetterX["68"]["Position"] = UDim2.new(0.92208, 0, 0.2381, 0);
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.Info.UIStroke
+BetterX["69"] = Instance.new("UIStroke", BetterX["64"]);
+BetterX["69"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+BetterX["69"]["Color"] = Color3.fromRGB(59, 71, 85);
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.Info
+BetterX["6a"] = Instance.new("Frame", BetterX["61"]);
+BetterX["6a"]["BorderSizePixel"] = 0;
+BetterX["6a"]["BackgroundColor3"] = Color3.fromRGB(37, 44, 53);
+BetterX["6a"]["Size"] = UDim2.new(0, 385, 0, 42);
+BetterX["6a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["6a"]["Name"] = [[Info]];
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.Info.UICorner
+BetterX["6b"] = Instance.new("UICorner", BetterX["6a"]);
+BetterX["6b"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.Info.Title
+BetterX["6c"] = Instance.new("TextLabel", BetterX["6a"]);
+BetterX["6c"]["BorderSizePixel"] = 0;
+BetterX["6c"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+BetterX["6c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["6c"]["TextSize"] = 14;
+BetterX["6c"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+BetterX["6c"]["TextColor3"] = Color3.fromRGB(59, 71, 85);
+BetterX["6c"]["BackgroundTransparency"] = 1;
+BetterX["6c"]["Size"] = UDim2.new(0, 330, 0, 42);
+BetterX["6c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["6c"]["Text"] = [[Scripter Alvin]];
+BetterX["6c"]["Name"] = [[Title]];
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.Info.Title.UIPadding
+BetterX["6d"] = Instance.new("UIPadding", BetterX["6c"]);
+BetterX["6d"]["PaddingLeft"] = UDim.new(0, 8);
+BetterX["6d"]["PaddingBottom"] = UDim.new(0, 1);
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.Info.ImageLabel
+BetterX["6e"] = Instance.new("ImageLabel", BetterX["6a"]);
+BetterX["6e"]["BorderSizePixel"] = 0;
+BetterX["6e"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["6e"]["ImageColor3"] = Color3.fromRGB(59, 71, 85);
+BetterX["6e"]["Image"] = [[rbxassetid://10723415903]];
+BetterX["6e"]["Size"] = UDim2.new(0, 22, 0, 22);
+BetterX["6e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["6e"]["BackgroundTransparency"] = 1;
+BetterX["6e"]["Position"] = UDim2.new(0.92208, 0, 0.2381, 0);
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.Info.UIStroke
+BetterX["6f"] = Instance.new("UIStroke", BetterX["6a"]);
+BetterX["6f"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+BetterX["6f"]["Color"] = Color3.fromRGB(59, 71, 85);
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.Info
+BetterX["70"] = Instance.new("Frame", BetterX["61"]);
+BetterX["70"]["BorderSizePixel"] = 0;
+BetterX["70"]["BackgroundColor3"] = Color3.fromRGB(37, 44, 53);
+BetterX["70"]["Size"] = UDim2.new(0, 385, 0, 42);
+BetterX["70"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["70"]["Name"] = [[Info]];
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.Info.UICorner
+BetterX["71"] = Instance.new("UICorner", BetterX["70"]);
+BetterX["71"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.Info.Title
+BetterX["72"] = Instance.new("TextLabel", BetterX["70"]);
+BetterX["72"]["BorderSizePixel"] = 0;
+BetterX["72"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+BetterX["72"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["72"]["TextSize"] = 14;
+BetterX["72"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+BetterX["72"]["TextColor3"] = Color3.fromRGB(59, 71, 85);
+BetterX["72"]["BackgroundTransparency"] = 1;
+BetterX["72"]["Size"] = UDim2.new(0, 330, 0, 42);
+BetterX["72"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["72"]["Text"] = [[Scripts For Buttons Artur_Official]];
+BetterX["72"]["Name"] = [[Title]];
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.Info.Title.UIPadding
+BetterX["73"] = Instance.new("UIPadding", BetterX["72"]);
+BetterX["73"]["PaddingLeft"] = UDim.new(0, 8);
+BetterX["73"]["PaddingBottom"] = UDim.new(0, 1);
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.Info.ImageLabel
+BetterX["74"] = Instance.new("ImageLabel", BetterX["70"]);
+BetterX["74"]["BorderSizePixel"] = 0;
+BetterX["74"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["74"]["ImageColor3"] = Color3.fromRGB(59, 71, 85);
+BetterX["74"]["Image"] = [[rbxassetid://10723415903]];
+BetterX["74"]["Size"] = UDim2.new(0, 22, 0, 22);
+BetterX["74"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["74"]["BackgroundTransparency"] = 1;
+BetterX["74"]["Position"] = UDim2.new(0.92208, 0, 0.2381, 0);
+
+
+-- StarterGui.BetterX.Main.Tabs.CreditsTab.Info.UIStroke
+BetterX["75"] = Instance.new("UIStroke", BetterX["70"]);
+BetterX["75"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+BetterX["75"]["Color"] = Color3.fromRGB(59, 71, 85);
+
+
+-- StarterGui.BetterX.Main.Tabs.SettingsTab
+BetterX["76"] = Instance.new("Frame", BetterX["2b"]);
+BetterX["76"]["Visible"] = false;
+BetterX["76"]["BorderSizePixel"] = 0;
+BetterX["76"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["76"]["Size"] = UDim2.new(0, 386, 0, 293);
+BetterX["76"]["Position"] = UDim2.new(0.01781, 0, 0.02658, 0);
+BetterX["76"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["76"]["Name"] = [[SettingsTab]];
+BetterX["76"]["BackgroundTransparency"] = 1;
+BetterX["76"]["SelectionGroup"] = true;
+
+
+-- StarterGui.BetterX.Main.Tabs.SettingsTab.UIListLayout
+BetterX["77"] = Instance.new("UIListLayout", BetterX["76"]);
+BetterX["77"]["Padding"] = UDim.new(0, 6);
+BetterX["77"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.BetterX.Main.Tabs.SettingsTab.UIPadding
+BetterX["78"] = Instance.new("UIPadding", BetterX["76"]);
+BetterX["78"]["PaddingTop"] = UDim.new(0, 1);
+BetterX["78"]["PaddingRight"] = UDim.new(0, 1);
+BetterX["78"]["PaddingLeft"] = UDim.new(0, 1);
+BetterX["78"]["PaddingBottom"] = UDim.new(0, 1);
+
+
+-- StarterGui.BetterX.Main.UICorner
+BetterX["79"] = Instance.new("UICorner", BetterX["2"]);
+BetterX["79"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.BetterX.Scripts
+BetterX["7a"] = Instance.new("Folder", BetterX["1"]);
+BetterX["7a"]["Name"] = [[Scripts]];
+
+
+-- StarterGui.BetterX.Scripts.Draggable
+BetterX["7b"] = Instance.new("LocalScript", BetterX["7a"]);
+BetterX["7b"]["Name"] = [[Draggable]];
+
+
+-- StarterGui.BetterX.Scripts.ResetOnSpawn
+BetterX["7c"] = Instance.new("LocalScript", BetterX["7a"]);
+BetterX["7c"]["Name"] = [[ResetOnSpawn]];
+
+
+-- StarterGui.BetterX.OpenButton
+BetterX["7d"] = Instance.new("TextButton", BetterX["1"]);
+BetterX["7d"]["BorderSizePixel"] = 0;
+BetterX["7d"]["TextSize"] = 30;
+BetterX["7d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+BetterX["7d"]["BackgroundColor3"] = Color3.fromRGB(32, 32, 32);
+BetterX["7d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+BetterX["7d"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+BetterX["7d"]["Size"] = UDim2.new(0, 80, 0, 56);
+BetterX["7d"]["Name"] = [[OpenButton]];
+BetterX["7d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["7d"]["Text"] = [[Open]];
+BetterX["7d"]["Position"] = UDim2.new(0.0209, 0, 0.5, 0);
+
+
+-- StarterGui.BetterX.OpenButton.UIStroke
+BetterX["7e"] = Instance.new("UIStroke", BetterX["7d"]);
+BetterX["7e"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+BetterX["7e"]["Color"] = Color3.fromRGB(65, 65, 65);
+
+
+-- StarterGui.BetterX.OpenButton.UICorner
+BetterX["7f"] = Instance.new("UICorner", BetterX["7d"]);
+BetterX["7f"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.BetterX.OpenButton.Shadows
+BetterX["80"] = Instance.new("Frame", BetterX["7d"]);
+BetterX["80"]["ZIndex"] = 0;
+BetterX["80"]["BorderSizePixel"] = 0;
+BetterX["80"]["Size"] = UDim2.new(1.02544, 0, 1, 0);
+BetterX["80"]["Name"] = [[Shadows]];
+BetterX["80"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.BetterX.OpenButton.Shadows.Shadow2
+BetterX["81"] = Instance.new("ImageLabel", BetterX["80"]);
+BetterX["81"]["ZIndex"] = 0;
+BetterX["81"]["BorderSizePixel"] = 0;
+BetterX["81"]["SliceCenter"] = Rect.new(49, 49, 450, 450);
+BetterX["81"]["ScaleType"] = Enum.ScaleType.Slice;
+BetterX["81"]["ImageTransparency"] = 0.5;
+BetterX["81"]["ImageColor3"] = Color3.fromRGB(0, 0, 0);
+BetterX["81"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+BetterX["81"]["Image"] = [[rbxassetid://6014261993]];
+BetterX["81"]["Size"] = UDim2.new(1, 47, 1, 47);
+BetterX["81"]["BackgroundTransparency"] = 1;
+BetterX["81"]["Name"] = [[Shadow2]];
+BetterX["81"]["Position"] = UDim2.new(0.5, 0, 0.5, 0);
+
+
+-- StarterGui.BetterX.OpenButton.LocalScript
+BetterX["82"] = Instance.new("LocalScript", BetterX["7d"]);
+
+
+
+-- StarterGui.BetterX.Main.TopBar.Close.LocalScript
+local function C_c()
+local script = BetterX["c"];
+	local Main = script.Parent.Parent.Parent.Parent.Main
+	local Close = script.Parent.Parent.Close
+	
+	Close.MouseButton1Click:Connect(function()
+		Close.Parent.Parent.Parent.Main.Visible = false
+	end)
+end;
+task.spawn(C_c);
+-- StarterGui.BetterX.Main.Navigation.HomeButton.LocalScript
+local function C_14()
+local script = BetterX["14"];
+	local mouse = script.Parent
+	local HomeTab = script.Parent.Parent.Parent.Tabs.HomeTab
+	local MainTab = script.Parent.Parent.Parent.Tabs.MainTab
+	local CreditsTab = script.Parent.Parent.Parent.Tabs.CreditsTab
+	local VisualsTab = script.Parent.Parent.Parent.Tabs.VisualsTab
+	local SettingsTab = script.Parent.Parent.Parent.Tabs.SettingsTab
+	
+	
+	mouse.MouseButton1Click:Connect(function()
+		HomeTab.Visible = true
+		MainTab.Visible = false
+		SettingsTab.Visible= false
+		CreditsTab.Visible = false
+		VisualsTab.Visible = false
+	end)
+end;
+task.spawn(C_14);
+-- StarterGui.BetterX.Main.Navigation.MainButton.LocalScript
+local function C_1b()
+local script = BetterX["1b"];
+	local mouse = script.Parent
+	local HomeTab = script.Parent.Parent.Parent.Tabs.HomeTab
+	local MainTab = script.Parent.Parent.Parent.Tabs.MainTab
+	local CreditsTab = script.Parent.Parent.Parent.Tabs.CreditsTab
+	local VisualsTab = script.Parent.Parent.Parent.Tabs.VisualsTab
+	local SettingsTab = script.Parent.Parent.Parent.Tabs.SettingsTab
+	
+	
+	mouse.MouseButton1Click:Connect(function()
+		HomeTab.Visible = false
+		MainTab.Visible = true
+		SettingsTab.Visible= false
+		CreditsTab.Visible = false
+		VisualsTab.Visible = false
+	end)
+end;
+task.spawn(C_1b);
+-- StarterGui.BetterX.Main.Navigation.VisualsButton.LocalScript
+local function C_20()
+local script = BetterX["20"];
+	local mouse = script.Parent
+	local HomeTab = script.Parent.Parent.Parent.Tabs.HomeTab
+	local MainTab = script.Parent.Parent.Parent.Tabs.MainTab
+	local CreditsTab = script.Parent.Parent.Parent.Tabs.CreditsTab
+	local VisualsTab = script.Parent.Parent.Parent.Tabs.VisualsTab
+	local SettingsTab = script.Parent.Parent.Parent.Tabs.SettingsTab
+	
+	
+	mouse.MouseButton1Click:Connect(function()
+		HomeTab.Visible = false
+		MainTab.Visible = false
+		SettingsTab.Visible= false
+		CreditsTab.Visible = false
+		VisualsTab.Visible = true
+	end)
+end;
+task.spawn(C_20);
+-- StarterGui.BetterX.Main.Navigation.CreditsButton.LocalScript
+local function C_25()
+local script = BetterX["25"];
+	local mouse = script.Parent
+	local HomeTab = script.Parent.Parent.Parent.Tabs.HomeTab
+	local MainTab = script.Parent.Parent.Parent.Tabs.MainTab
+	local CreditsTab = script.Parent.Parent.Parent.Tabs.CreditsTab
+	local VisualsTab = script.Parent.Parent.Parent.Tabs.VisualsTab
+	local SettingsTab = script.Parent.Parent.Parent.Tabs.SettingsTab
+	
+	
+	mouse.MouseButton1Click:Connect(function()
+		HomeTab.Visible = false
+		MainTab.Visible = false
+		SettingsTab.Visible= false
+		CreditsTab.Visible = true
+		VisualsTab.Visible = false
+	end)
+end;
+task.spawn(C_25);
+-- StarterGui.BetterX.Main.Navigation.SettingsButton.LocalScript
+local function C_2a()
+local script = BetterX["2a"];
+	local mouse = script.Parent
+	local HomeTab = script.Parent.Parent.Parent.Tabs.HomeTab
+	local MainTab = script.Parent.Parent.Parent.Tabs.MainTab
+	local CreditsTab = script.Parent.Parent.Parent.Tabs.CreditsTab
+	local VisualsTab = script.Parent.Parent.Parent.Tabs.VisualsTab
+	local SettingsTab = script.Parent.Parent.Parent.Tabs.SettingsTab
+	
+	
+	mouse.MouseButton1Click:Connect(function()
+		HomeTab.Visible = false
+		MainTab.Visible = false
+		SettingsTab.Visible= true
+		CreditsTab.Visible = false
+		VisualsTab.Visible = false
+	end)
+end;
+task.spawn(C_2a);
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.InfYield.LocalScript
+local function C_3b()
+local script = BetterX["3b"];
+	local InfYield = script.Parent.Parent.InfYield
+	
+	InfYield.MouseButton1Down:connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+	end)
+end;
+task.spawn(C_3b);
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.FEChatDraw.LocalScript
+local function C_42()
+local script = BetterX["42"];
+	local FEChatDraw = script.Parent.Parent.FEChatDraw
+	
+	FEChatDraw.MouseButton1Down:connect(function()
+		loadstring(game:HttpGet('https://pastebin.com/raw/q6WWVCKC'))()
+	end)
+end;
+task.spawn(C_42);
+-- StarterGui.BetterX.Main.Tabs.HomeTab.Button.UNCTEST.LocalScript
+local function C_49()
+local script = BetterX["49"];
+	local UNCTest = script.Parent.Parent.UNCTEST
+	
+	UNCTest.MouseButton1Down:connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/unified-naming-convention/NamingStandard/refs/heads/main/UNCCheckEnv.lua"))()
+	end)
+end;
+task.spawn(C_49);
+-- StarterGui.BetterX.Main.Tabs.MainTab.TextBox.EnterNumbers.LocalScript
+local function C_56()
+local script = BetterX["56"];
+	wait(2)
+	local plr = game.Players.LocalPlayer
+	local char = plr.Character
+	local hum = char:WaitForChild("Humanoid")
+	
+	local limit = 500
+	
+	script.Parent.Changed:Connect(function()
+		hum.WalkSpeed = script.Parent.Text
+	
+		if hum.WalkSpeed >= limit then
+			script.Parent.Text = "500"
+		end
+	end)
+end;
+task.spawn(C_56);
+-- StarterGui.BetterX.Main.Tabs.VisualsTab.Button.PlayerESP.LocalScript
+local function C_60()
+local script = BetterX["60"];
+	local PlayerESP = script.Parent.Parent.PlayerESP
+	
+	PlayerESP.MouseButton1Down:connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Ar5urOfficial/ByArtur_Official/refs/heads/main/EspByArtur_Official"))()
+	end)
+end;
+task.spawn(C_60);
+-- StarterGui.BetterX.Scripts.Draggable
+local function C_7b()
+local script = BetterX["7b"];
+	local Main = script.Parent.Parent.Parent.BetterX.Main
+	
+	Main.Draggable = true
+	Main.Active = true
+end;
+task.spawn(C_7b);
+-- StarterGui.BetterX.Scripts.ResetOnSpawn
+local function C_7c()
+local script = BetterX["7c"];
+	local BetterX = script.Parent.Parent.Parent.BetterX
+	
+	BetterX.ResetOnSpawn = false
+end;
+task.spawn(C_7c);
+-- StarterGui.BetterX.OpenButton.LocalScript
+local function C_82()
+local script = BetterX["82"];
+	Open = script.Parent
+	
+	Open.MouseButton1Click:Connect(function()
+		Open.Parent.Parent.BetterX.Main.Visible = true
+	end)
+end;
+task.spawn(C_82);
+
+return BetterX["1"], require;
