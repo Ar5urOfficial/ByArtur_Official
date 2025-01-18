@@ -207,3 +207,54 @@ VisualsTab:AddToggle({
 	end    
 })
 
+MainTab:AddButton({
+	Name = "Instant Proximity Prompt",
+	Callback = function()
+        local function setInstantProximityPrompt()
+            for _, obj in ipairs(workspace:GetDescendants()) do
+                if obj:IsA("ProximityPrompt") then
+                    obj.HoldDuration = 0
+                end
+            end
+            print("All ProximityPrompts have been set to instant!")
+        end
+    
+        workspace.DescendantAdded:Connect(function(descendant)
+            if descendant:IsA("ProximityPrompt") then
+                descendant.HoldDuration = 0
+            end
+        end)
+    
+        setInstantProximityPrompt()
+    
+        local function autoPressProximityPrompt()
+            local function pressPromptKey()
+                for _, obj in ipairs(workspace:GetDescendants()) do
+                    if obj:IsA("ProximityPrompt") then
+                        local distance = (player.Character.HumanoidRootPart.Position - obj.Parent.HumanoidRootPart.Position).Magnitude
+                        if distance <= obj.MaxActivationDistance then
+                            obj:InputBegan(Enum.UserInputType.Keyboard)
+                        end
+                    end
+                end
+            end
+    
+            while true do
+                wait(0.1)
+                pressPromptKey()
+            end
+        end
+    
+    
+        local function extendProximityPrompt()
+            for _, obj in ipairs(workspace:GetDescendants()) do
+                if obj:IsA("ProximityPrompt") then
+                    obj.MaxActivationDistance = 20
+                end
+            end
+            print("ProximityPrompt eyesight extended!")
+        end
+    
+        
+  	end    
+})
